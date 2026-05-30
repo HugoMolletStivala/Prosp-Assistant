@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ColdCraft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ═══ SETUP ═══ -->
+<div id="s-setup" class="screen active">
+  <div class="setup-wrap">
+
+    <header class="setup-head">
+      <div class="logo">◈ ColdCraft</div>
+      <p class="setup-sub">Construis ton arbre d'appel. Chaque réponse mène à la bonne réplique.</p>
+    </header>
+
+    <div class="context-bar">
+      <div class="field">
+        <label>Prénom prospect</label>
+        <input id="cfg-name" type="text" placeholder="Sophie" value="Sophie"/>
+      </div>
+      <div class="field">
+        <label>Entreprise</label>
+        <input id="cfg-company" type="text" placeholder="Acme SAS" value="Acme SAS"/>
+      </div>
+      <div class="field field-wide">
+        <label>Objectif de l'appel</label>
+        <input id="cfg-goal" type="text" placeholder="Décrocher un RDV de 20 min" value="Décrocher un RDV de 20 min"/>
+      </div>
+    </div>
+
+    <div class="nodes-list" id="nodesList"></div>
+
+    <button class="btn-add" onclick="Editor.addNode()">+ Ajouter une étape</button>
+
+    <button class="btn-launch" onclick="App.launch()">
+      Lancer l'appel
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+
+  </div>
+</div>
+
+<!-- ═══ CALL ═══ -->
+<div id="s-call" class="screen">
+  <div class="call-wrap">
+
+    <div class="call-top">
+      <div class="call-top-left">
+        <span class="logo-sm">◈</span>
+        <div class="live-badge"><span class="pulse"></span>En appel</div>
+        <span class="prospect-tag" id="c-prospect"></span>
+      </div>
+      <div class="call-top-right">
+        <div class="timer" id="c-timer">00:00</div>
+        <button class="btn-end" onclick="App.end()">✕ Terminer</button>
+      </div>
+    </div>
+
+    <!-- progress bar -->
+    <div class="progress-bar"><div class="progress-fill" id="c-progress"></div></div>
+
+    <!-- frise -->
+    <div class="frise-outer">
+      <div class="frise" id="c-frise"></div>
+    </div>
+
+    <!-- current card -->
+    <div class="current-card" id="c-card">
+      <div class="current-label" id="c-label"></div>
+      <div class="current-script" id="c-script"></div>
+      <div class="current-choices" id="c-choices"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ END ═══ -->
+<div id="s-end" class="screen">
+  <div class="end-wrap">
+    <div class="end-card">
+      <div class="end-logo">◈</div>
+      <h2>Appel terminé</h2>
+      <div class="end-meta" id="e-meta"></div>
+      <div class="end-log" id="e-log"></div>
+      <div class="end-btns">
+        <button class="btn-sec" onclick="App.restart()">Refaire l'appel</button>
+        <button class="btn-pri" onclick="App.backToSetup()">Modifier le script</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
