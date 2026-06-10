@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Élise Marceau — Beauty Artist Paris · Maquillage Mariage & Événements</title>
+<meta name="description" content="Élise Marceau, Beauty Artist d'exception à Paris. Maquillage mariage, événements prestige, shootings photo. 12 ans d'expertise · 847 femmes sublimées · 247 avis 5★.">
+<meta property="og:title" content="Élise Marceau — Beauty Artist Paris">
+<meta property="og:description" content="L'art de révéler votre beauté. Maquillage haut de gamme, mariages et événements prestige, Paris & déplacements France entière.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Élise Marceau Beauty Artist","description":"Beauty Artist haut de gamme spécialisée mariage et événements, Paris","address":{"@type":"PostalAddress","addressLocality":"Paris","addressCountry":"FR"},"priceRange":"€€€","aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"247"}}</script>
+<style>
+:root{
+  --ink:#1A1118;
+  --cream:#FBF7F4;
+  --nude:#F0E8DF;
+  --powder:#F2DAD8;
+  --rose:#D4A5A0;
+  --champagne:#C8A96E;
+  --blush:#E8C5BF;
+  --mink:#8C6B68;
+  --off:rgba(26,17,24,.55);
+  --off-lt:rgba(26,17,24,.32);
+  --faint:rgba(26,17,24,.07);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;overflow-x:hidden;scroll-behavior:auto}
+body{font-family:'Jost',sans-serif;background:var(--ink);color:var(--cream);overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;border:none;background:none;cursor:pointer}
+
+/* ── LOADER ── */
+#loader{
+  position:fixed;inset:0;background:var(--ink);z-index:10000;
+  display:flex;align-items:center;justify-content:center;flex-direction:column;
+  transition:opacity .9s ease,visibility .9s ease;
+}
+#loader.out{opacity:0;visibility:hidden;pointer-events:none}
+.ld-word{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(52px,9vw,100px);font-weight:300;letter-spacing:.2em;color:var(--cream);
+  overflow:hidden;line-height:1;
+}
+.ld-word span{display:inline-block;transform:translateY(100%);animation:ldup .9s cubic-bezier(.16,1,.3,1) forwards}
+.ld-word .w2{animation-delay:.06s}.ld-word .w3{animation-delay:.12s}
+.ld-word .w4{animation-delay:.18s}.ld-word .w5{animation-delay:.24s}
+.ld-sep{width:1px;height:0;background:rgba(212,165,160,.4);margin:18px auto;animation:ldsep .5s ease .55s forwards}
+.ld-sub{font-size:9px;letter-spacing:.45em;text-transform:uppercase;color:var(--rose);font-weight:300;opacity:0;animation:ldfade .5s ease .85s forwards}
+@keyframes ldup{to{transform:translateY(0)}}
+@keyframes ldsep{to{height:36px}}
+@keyframes ldfade{to{opacity:1}}
+
+/* ── MASTHEAD ── */
+#mast{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+  padding:22px clamp(20px,4vw,60px);
+  transition:padding .4s,background .4s,backdrop-filter .4s,border-color .4s;
+  border-bottom:1px solid transparent;
+}
+#mast.s{
+  padding:13px clamp(20px,4vw,60px);
+  background:rgba(251,247,244,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-color:rgba(212,165,160,.18);
+}
+#mast.s .mast-logo,#mast.s .mast-nav a:hover{color:var(--ink)}
+#mast.s .mast-nav a{color:rgba(26,17,24,.45)}
+#mast.s .mast-btn{border-color:rgba(212,165,160,.5);color:var(--mink)}
+#mast.s .mast-btn:hover{background:var(--rose);color:var(--cream);border-color:var(--rose)}
+#mast.s .mast-hbg span{background:var(--ink)}
+.mast-logo{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2.2vw,22px);font-weight:300;letter-spacing:.22em;text-transform:uppercase;color:var(--cream);text-align:center;white-space:nowrap;transition:color .4s}
+.mast-left{display:flex;align-items:center}
+.mast-right{display:flex;align-items:center;justify-content:flex-end;gap:28px}
+.mast-nav{display:flex;gap:24px;list-style:none}
+.mast-nav a{font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;color:rgba(251,247,244,.45);font-weight:300;transition:color .3s}
+.mast-nav a:hover{color:var(--cream)}
+.mast-btn{font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;padding:9px 20px;border:1px solid rgba(212,165,160,.35);color:var(--blush);font-weight:300;transition:background .3s,color .3s,border-color .3s;white-space:nowrap}
+.mast-btn:hover{background:var(--rose);color:var(--cream);border-color:var(--rose)}
+.mast-hbg{display:none;flex-direction:column;gap:5px;padding:4px;cursor:pointer}
+.mast-hbg span{display:block;width:22px;height:1px;background:var(--cream);transition:transform .3s,opacity .3s}
+.mast-hbg.o span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.mast-hbg.o span:nth-child(2){opacity:0}
+.mast-hbg.o span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+#mob-menu{position:fixed;inset:0;background:var(--nude);z-index:490;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;opacity:0;pointer-events:none;transition:opacity .4s}
+#mob-menu.o{opacity:1;pointer-events:all}
+#mob-menu a{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,6vw,52px);font-weight:300;letter-spacing:.1em;color:var(--ink);transition:color .3s}
+#mob-menu a:hover{color:var(--rose)}
+
+/* ══ COVER ══ */
+.cover{
+  width:100%;height:100svh;min-height:600px;
+  display:grid;
+  grid-template-columns:45% 55%;
+  position:relative;
+}
+.cover-left{
+  background:var(--ink);
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding:clamp(88px,10vw,136px) clamp(32px,4.5vw,72px) clamp(44px,5vw,72px);
+  position:relative;z-index:2;overflow:hidden;
+}
+.cover-left::after{
+  content:'';position:absolute;bottom:-120px;left:-80px;
+  width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle,rgba(212,165,160,.1) 0%,transparent 70%);
+  pointer-events:none;
+}
+.cover-eyebrow{font-size:8px;letter-spacing:.42em;text-transform:uppercase;color:var(--rose);font-weight:300;display:flex;align-items:center;gap:12px}
+.cover-eyebrow::before{content:'';width:24px;height:1px;background:var(--rose)}
+.cover-hed-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(28px,4vw,52px) 0}
+.cover-hed{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(56px,9.5vw,128px);font-weight:300;line-height:.88;letter-spacing:-.02em;color:var(--cream);
+  margin-bottom:clamp(18px,2.5vw,32px);
+}
+.cover-hed em{display:block;font-style:italic;color:var(--rose)}
+.cover-deck{font-family:'EB Garamond',serif;font-size:clamp(14px,1.5vw,17px);font-style:italic;line-height:1.72;color:rgba(251,247,244,.5);max-width:300px;margin-bottom:clamp(24px,3vw,38px)}
+.cover-ctas{display:flex;flex-direction:column;gap:11px;align-items:flex-start}
+.cover-btn-main{
+  display:inline-flex;align-items:center;gap:13px;padding:13px 30px;
+  background:var(--rose);color:var(--cream);font-size:8.5px;font-weight:400;letter-spacing:.28em;text-transform:uppercase;
+  position:relative;overflow:hidden;transition:color .4s;
+}
+.cover-btn-main::before{content:'';position:absolute;inset:0;background:var(--champagne);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.cover-btn-main:hover::before{transform:scaleX(1)}
+.cover-btn-main span{position:relative;z-index:1}
+.cover-btn-sec{font-size:8px;letter-spacing:.28em;text-transform:uppercase;color:rgba(251,247,244,.3);font-weight:300;display:flex;align-items:center;gap:9px;padding-bottom:5px;border-bottom:1px solid rgba(251,247,244,.12);transition:color .3s,border-color .3s;width:fit-content}
+.cover-btn-sec:hover{color:rgba(251,247,244,.65);border-color:rgba(251,247,244,.38)}
+.cover-stats{display:flex;gap:clamp(20px,3.5vw,44px);position:relative;z-index:1}
+.cov-stat{display:flex;flex-direction:column;gap:3px}
+.cov-stat-n{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.8vw,42px);font-weight:300;color:var(--cream);line-height:1;letter-spacing:-.01em}
+.cov-stat-n sup{font-size:.42em;color:var(--rose);vertical-align:super}
+.cov-stat-l{font-size:7.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(251,247,244,.25);font-weight:300}
+.cover-right{
+  position:relative;
+  overflow:hidden;
+  background:var(--mink);
+}
+.cover-right img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;object-position:50% 18%;
+  will-change:transform;
+}
+.cover-vogue-bg{
+  position:absolute;inset:0;z-index:1;pointer-events:none;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.cover-vogue-bg span{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(120px,22vw,320px);font-weight:600;letter-spacing:.12em;
+  color:rgba(251,247,244,.055);white-space:nowrap;user-select:none;
+  transform:rotate(-90deg);
+}
+.cover-right::after{
+  content:'';position:absolute;inset:0;z-index:2;
+  background:linear-gradient(to right,rgba(26,17,24,.5) 0%,transparent 30%);
+}
+.cover-right::before{
+  content:'';position:absolute;left:0;top:12%;bottom:12%;width:3px;z-index:4;
+  background:linear-gradient(to bottom,transparent,var(--rose),var(--blush),transparent);
+  opacity:.75;
+}
+.cover-caption{
+  position:absolute;bottom:28px;right:22px;z-index:5;
+  font-size:7.5px;letter-spacing:.28em;text-transform:uppercase;color:rgba(251,247,244,.3);font-weight:300;
+  writing-mode:vertical-rl;transform:rotate(180deg);
+}
+.cover-dots{
+  position:absolute;top:24px;right:24px;z-index:3;
+  width:64px;height:64px;
+  background-image:radial-gradient(circle,rgba(251,247,244,.18) 1px,transparent 1px);
+  background-size:8px 8px;pointer-events:none;
+}
+.scroll-ind{
+  position:absolute;left:clamp(18px,3vw,44px);bottom:clamp(28px,4vw,48px);z-index:3;
+  display:flex;align-items:center;gap:10px;opacity:.4;
+}
+.scroll-ind-text{font-size:7px;letter-spacing:.38em;text-transform:uppercase;color:var(--cream);writing-mode:vertical-rl;font-weight:300}
+.scroll-ind-line{width:1px;height:42px;background:linear-gradient(to bottom,var(--rose),transparent);animation:sc 2s ease infinite}
+@keyframes sc{0%,100%{transform:scaleY(1);opacity:.4}50%{transform:scaleY(1.3);opacity:.75}}
+
+/* ══ MANIFESTE ══ */
+.manifeste{
+  background:var(--cream);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  padding:clamp(96px,11vw,156px) clamp(20px,5vw,80px);
+  position:relative;overflow:hidden;
+}
+.manifeste::before{
+  content:'✿';position:absolute;right:-2%;bottom:-6%;
+  font-size:clamp(200px,34vw,460px);color:rgba(232,197,191,.16);
+  line-height:1;pointer-events:none;user-select:none;
+}
+.manifeste-inner{max-width:960px;display:grid;grid-template-columns:auto 1fr;gap:clamp(36px,6vw,96px);align-items:start;position:relative;z-index:1}
+.manifeste-num{font-family:'Cormorant Garamond',serif;font-size:clamp(120px,18vw,220px);font-weight:300;line-height:.85;color:rgba(26,17,24,.05);letter-spacing:-.04em;user-select:none;flex-shrink:0}
+.manifeste-text-block{padding-top:clamp(14px,2vw,30px)}
+.manifeste-rubric{font-size:8.5px;letter-spacing:.38em;text-transform:uppercase;color:var(--rose);font-weight:400;margin-bottom:16px;display:flex;align-items:center;gap:13px}
+.manifeste-rubric::before{content:'';width:26px;height:1px;background:var(--rose)}
+.manifeste-drop{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4.6vw,60px);font-weight:300;line-height:1.06;letter-spacing:-.02em;color:var(--ink);margin-bottom:26px}
+.manifeste-drop em{font-style:italic;color:var(--rose)}
+.manifeste-body{font-family:'EB Garamond',serif;font-size:clamp(15px,1.65vw,18px);font-weight:400;line-height:1.9;color:var(--off);column-count:2;column-gap:40px;margin-bottom:32px}
+.manifeste-body strong{color:var(--ink);font-weight:500}
+.manifeste-sig{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,56px);font-style:italic;font-weight:300;color:rgba(26,17,24,.17);margin-top:22px;letter-spacing:-.02em}
+
+/* ══ DOUBLE PAGE ══ */
+.dbl{display:grid;grid-template-columns:1fr 1fr;min-height:100svh}
+.dbl-photo{position:relative;overflow:hidden}
+.dbl-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 15%;will-change:transform;transition:transform 8s ease}
+.dbl-photo:hover img{transform:scale(1.03)}
+.dbl-caption{position:absolute;bottom:26px;left:18px}
+.dbl-cap-text{font-size:8px;letter-spacing:.25em;text-transform:uppercase;color:rgba(251,247,244,.38);font-weight:300}
+.dbl-text{
+  background:var(--powder);color:var(--ink);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:clamp(44px,6vw,96px) clamp(30px,5vw,76px);
+  position:relative;overflow:hidden;
+}
+.dbl-text::before{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(212,165,160,.2) 0%,transparent 70%);pointer-events:none}
+.dbl-issue{font-size:8.5px;letter-spacing:.35em;text-transform:uppercase;color:var(--rose);margin-bottom:32px;display:flex;align-items:center;gap:12px;font-weight:400}
+.dbl-issue::before{content:'';width:20px;height:1px;background:var(--rose)}
+.dbl-title{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,5vw,68px);font-weight:300;line-height:1;letter-spacing:-.02em;color:var(--ink);margin-bottom:24px}
+.dbl-title em{font-style:italic;display:block;color:var(--mink)}
+.dbl-body{font-family:'EB Garamond',serif;font-size:clamp(14px,1.55vw,17.5px);font-style:italic;line-height:1.87;color:var(--off);margin-bottom:40px;max-width:360px}
+.dbl-stats{display:flex;gap:32px;padding-top:32px;border-top:1px solid rgba(26,17,24,.1)}
+.dbl-stat-n{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.8vw,58px);font-weight:300;color:var(--ink);line-height:1;letter-spacing:-.02em}
+.dbl-stat-n sup{font-size:.4em;color:var(--rose);vertical-align:super;letter-spacing:0}
+.dbl-stat-l{font-size:8px;letter-spacing:.25em;text-transform:uppercase;color:var(--off-lt);margin-top:5px;font-weight:300}
+
+/* ══ PRESTATIONS ══ */
+.services-ed{background:var(--cream);color:var(--ink);padding:clamp(76px,9vw,132px) 0;position:relative;overflow:hidden}
+.services-ed::after{content:'BEAUTÉ';position:absolute;bottom:-3%;left:0;right:0;text-align:center;font-family:'Cormorant Garamond',serif;font-size:clamp(80px,20vw,280px);font-weight:300;letter-spacing:.1em;color:rgba(232,197,191,.11);line-height:1;pointer-events:none;user-select:none}
+.services-ed-header{padding:0 clamp(20px,5vw,80px);margin-bottom:clamp(40px,5vw,68px);display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:32px;position:relative;z-index:1}
+.services-ed-big{font-family:'Cormorant Garamond',serif;font-size:clamp(58px,10.5vw,144px);font-weight:300;line-height:.88;letter-spacing:-.03em;color:var(--ink)}
+.services-ed-big em{font-style:italic;color:var(--rose);display:block}
+.services-ed-intro p{font-family:'EB Garamond',serif;font-size:clamp(13px,1.5vw,17px);font-style:italic;line-height:1.82;color:var(--off);margin-bottom:18px}
+.services-list{border-top:1px solid var(--faint);position:relative;z-index:1}
+.service-row{display:grid;grid-template-columns:68px 1fr auto auto;align-items:center;gap:clamp(10px,2.2vw,36px);padding:clamp(16px,2.6vw,30px) clamp(20px,5vw,80px);border-bottom:1px solid var(--faint);position:relative;overflow:hidden;cursor:pointer}
+.service-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:var(--ink);transition:width .5s cubic-bezier(.16,1,.3,1);z-index:0}
+.service-row:hover::before{width:100%}
+.service-row>*{position:relative;z-index:1;transition:color .4s}
+.service-row:hover .srow-num{color:rgba(251,247,244,.22)}
+.service-row:hover .srow-name{color:var(--cream)}
+.service-row:hover .srow-desc{color:rgba(251,247,244,.38)}
+.service-row:hover .srow-price{color:var(--blush)}
+.srow-num{font-family:'Cormorant Garamond',serif;font-size:clamp(12px,1.3vw,14px);font-weight:300;color:var(--off-lt);letter-spacing:.1em}
+.srow-name{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,3vw,42px);font-weight:300;letter-spacing:-.01em;line-height:1.1;color:var(--ink)}
+.srow-name em{font-style:italic;font-weight:300}
+.srow-desc{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--off-lt);font-weight:300;max-width:180px;display:none}
+.srow-price{font-family:'Cormorant Garamond',serif;font-size:clamp(12px,1.6vw,18px);font-weight:300;color:var(--off-lt);white-space:nowrap;letter-spacing:.03em}
+
+/* ══════════════════════════════════════════════
+   GALERIE — CAROUSEL INFINI ROTATIF 3D
+══════════════════════════════════════════════ */
+.gallery-film{
+  padding:clamp(76px,9vw,116px) 0 clamp(96px,10vw,140px);
+  background:var(--ink);
+  position:relative;
+  overflow:hidden;
+}
+/* bloom de fond doux */
+.gallery-film::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 60%,rgba(212,165,160,.06) 0%,transparent 65%);
+  pointer-events:none;
+}
+.gallery-film-header{
+  padding:0 clamp(20px,5vw,80px);
+  margin-bottom:clamp(52px,6vw,88px);
+  display:flex;align-items:baseline;justify-content:space-between;
+  gap:clamp(12px,2.5vw,32px);
+}
+.gallery-film-title{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,8vw,112px);font-weight:300;letter-spacing:-.02em;line-height:.9;color:var(--cream)}
+.gallery-film-title em{font-style:italic;color:var(--rose)}
+.gallery-film-sub{font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;color:rgba(251,247,244,.22);font-weight:300;align-self:flex-end;padding-bottom:9px;white-space:nowrap}
+
+/* ── Scène 3D ── */
+.carousel-scene{
+  perspective:1200px;
+  perspective-origin:50% 40%;
+  width:100%;
+  display:flex;justify-content:center;
+  position:relative;
+  padding:0 0 clamp(24px,3vw,40px);
+}
+.carousel-track{
+  position:relative;
+  width:clamp(220px,28vw,380px);
+  height:clamp(280px,38vw,520px);
+  transform-style:preserve-3d;
+  animation:carouselSpin 22s linear infinite;
+  will-change:transform;
+}
+.carousel-track:hover{animation-play-state:paused}
+
+@keyframes carouselSpin{
+  from{transform:rotateY(0deg)}
+  to{transform:rotateY(-360deg)}
+}
+
+/* Chaque carte */
+.carousel-card{
+  position:absolute;inset:0;
+  border-radius:2px;
+  overflow:hidden;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  cursor:pointer;
+  transition:box-shadow .4s;
+}
+.carousel-card img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s cubic-bezier(.16,1,.3,1),filter .6s;
+  filter:brightness(.82) saturate(.88);
+  display:block;
+}
+.carousel-card:hover img{
+  transform:scale(1.04);
+  filter:brightness(1) saturate(1.08);
+}
+
+/* Overlay dégradé et label */
+.carousel-card-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(26,17,24,.72) 0%,rgba(26,17,24,.1) 45%,transparent 70%);
+  transition:opacity .4s;
+  pointer-events:none;
+}
+.carousel-card:hover .carousel-card-overlay{opacity:.5}
+
+.carousel-card-info{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:clamp(16px,2.5vw,28px);
+  z-index:2;
+  transform:translateY(6px);
+  transition:transform .5s cubic-bezier(.16,1,.3,1);
+}
+.carousel-card:hover .carousel-card-info{transform:translateY(0)}
+.carousel-card-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(14px,1.8vw,20px);font-weight:300;letter-spacing:.06em;
+  color:var(--cream);display:block;margin-bottom:4px;
+}
+.carousel-card-sub{
+  font-size:7.5px;letter-spacing:.28em;text-transform:uppercase;
+  color:rgba(251,247,244,.42);font-weight:300;
+}
+
+/* Positionnement des 6 cartes en cercle */
+.carousel-card:nth-child(1){transform:rotateY(  0deg) translateZ(clamp(260px,38vw,520px))}
+.carousel-card:nth-child(2){transform:rotateY( 60deg) translateZ(clamp(260px,38vw,520px))}
+.carousel-card:nth-child(3){transform:rotateY(120deg) translateZ(clamp(260px,38vw,520px))}
+.carousel-card:nth-child(4){transform:rotateY(180deg) translateZ(clamp(260px,38vw,520px))}
+.carousel-card:nth-child(5){transform:rotateY(240deg) translateZ(clamp(260px,38vw,520px))}
+.carousel-card:nth-child(6){transform:rotateY(300deg) translateZ(clamp(260px,38vw,520px))}
+
+/* Petales animées flottantes */
+@keyframes petalDrift{
+  0%{transform:translateY(0) translateX(0) rotate(0deg);opacity:0}
+  10%{opacity:.55}
+  80%{opacity:.4}
+  100%{transform:translateY(-120vh) translateX(clamp(30px,6vw,80px)) rotate(540deg);opacity:0}
+}
+.petal{
+  position:absolute;
+  pointer-events:none;
+  width:clamp(6px,1vw,12px);
+  aspect-ratio:1/1.4;
+  background:radial-gradient(ellipse at 40% 30%,rgba(232,197,191,.7),rgba(212,165,160,.3));
+  border-radius:50% 0 50% 0;
+  will-change:transform,opacity;
+}
+.petal:nth-child(1){left:8%;bottom:-5%;animation:petalDrift 9s ease-in 0s infinite}
+.petal:nth-child(2){left:18%;bottom:-8%;animation:petalDrift 11s ease-in 1.2s infinite}
+.petal:nth-child(3){left:32%;bottom:-3%;animation:petalDrift 8.5s ease-in 2.4s infinite}
+.petal:nth-child(4){left:52%;bottom:-6%;animation:petalDrift 10s ease-in .6s infinite}
+.petal:nth-child(5){left:68%;bottom:-4%;animation:petalDrift 9.5s ease-in 3.1s infinite}
+.petal:nth-child(6){left:80%;bottom:-7%;animation:petalDrift 12s ease-in 1.8s infinite}
+.petal:nth-child(7){left:92%;bottom:-5%;animation:petalDrift 7.5s ease-in 4.2s infinite}
+
+/* Contrôles ── pause/play + navigation */
+.carousel-controls{
+  display:flex;align-items:center;justify-content:center;gap:clamp(16px,2.5vw,32px);
+  margin-top:clamp(32px,4vw,56px);
+  position:relative;z-index:2;
+}
+.carousel-btn{
+  width:36px;height:36px;border:1px solid rgba(212,165,160,.28);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(251,247,244,.4);font-size:10px;
+  transition:border-color .3s,color .3s,background .3s;
+  cursor:pointer;
+}
+.carousel-btn:hover{border-color:var(--rose);color:var(--cream);background:rgba(212,165,160,.08)}
+.carousel-btn svg{width:10px;height:10px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.carousel-dots{display:flex;gap:8px;align-items:center}
+.carousel-dot{
+  width:5px;height:5px;border-radius:50%;background:rgba(251,247,244,.15);
+  transition:background .3s,transform .3s;cursor:pointer;
+  border:none;
+}
+.carousel-dot.act{background:var(--rose);transform:scale(1.4)}
+.carousel-hint{
+  text-align:center;margin-top:clamp(18px,2.5vw,28px);
+  font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:rgba(251,247,244,.16);font-weight:300;
+}
+
+/* ══ AVANT / APRÈS ══ */
+.ba-spread{
+  background:var(--nude);
+  padding:clamp(76px,9vw,132px) clamp(20px,5vw,80px);
+  position:relative;overflow:hidden;
+}
+.ba-spread::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(212,165,160,.15) 0%,transparent 60%);pointer-events:none}
+.ba-header{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:clamp(36px,4.5vw,60px);position:relative;z-index:1}
+.ba-title{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,7.5vw,108px);font-weight:300;line-height:.88;letter-spacing:-.03em;color:var(--ink)}
+.ba-title em{font-style:italic;color:var(--rose)}
+.ba-hint{font-family:'EB Garamond',serif;font-size:clamp(13px,1.4vw,15.5px);font-style:italic;color:var(--off);max-width:220px;line-height:1.72;padding-bottom:8px}
+.ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2vw,22px);position:relative;z-index:1}
+.ba-card{display:flex;flex-direction:column;gap:11px}
+.ba-slider-wrap{
+  position:relative;overflow:hidden;
+  aspect-ratio:3/4;
+  user-select:none;touch-action:pan-y;
+  background:var(--mink);
+}
+.ba-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;display:block}
+.ba-img-after{clip-path:inset(0 50% 0 0)}
+.ba-slider-line{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:2px;background:rgba(251,247,244,.9);z-index:5;pointer-events:none}
+.ba-handle{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:34px;height:34px;border-radius:50%;
+  background:var(--cream);z-index:6;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 3px 14px rgba(0,0,0,.2);
+  cursor:ew-resize;pointer-events:all;
+}
+.ba-handle svg{width:14px;height:14px;fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ba-tags{position:absolute;top:10px;left:0;right:0;display:flex;justify-content:space-between;padding:0 10px;z-index:4;pointer-events:none}
+.ba-tag{font-size:7px;letter-spacing:.28em;text-transform:uppercase;font-weight:400;padding:3px 8px}
+.ba-tag-b{background:rgba(26,17,24,.48);color:rgba(251,247,244,.72)}
+.ba-tag-a{background:var(--rose);color:var(--cream)}
+.ba-label{font-family:'Cormorant Garamond',serif;font-size:clamp(14px,1.6vw,19px);font-weight:400;color:var(--ink)}
+.ba-sub{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--off-lt);font-weight:300}
+
+/* ══ TÉMOIGNAGES ══ */
+.quotes-spread{background:var(--ink);padding:clamp(76px,9vw,132px) 0;position:relative;overflow:hidden}
+.quotes-spread::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(212,165,160,.05) 0%,transparent 60%);pointer-events:none}
+.quotes-header{padding:0 clamp(20px,5vw,80px);margin-bottom:clamp(52px,6.5vw,84px);display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.quotes-title{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,7vw,92px);font-weight:300;letter-spacing:-.02em;line-height:.9;color:var(--cream)}
+.quotes-title em{font-style:italic;color:var(--rose)}
+.quotes-count{font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;color:rgba(251,247,244,.2);font-weight:300;white-space:nowrap;padding-bottom:5px}
+.quotes-grid{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid rgba(251,247,244,.06)}
+.quote-cell{padding:clamp(26px,3.3vw,52px) clamp(16px,3.3vw,48px);border-right:1px solid rgba(251,247,244,.06);display:flex;flex-direction:column;gap:18px;position:relative;overflow:hidden;transition:background .4s}
+.quote-cell::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(232,197,191,.07) 0%,transparent 70%);opacity:0;transition:opacity .4s}
+.quote-cell:hover::before{opacity:1}
+.quote-cell:last-child{border-right:none}
+.quote-mark{font-family:'Cormorant Garamond',serif;font-size:68px;line-height:1;color:rgba(212,165,160,.16);margin-bottom:-12px;user-select:none}
+.quote-body{font-family:'EB Garamond',serif;font-size:clamp(14px,1.6vw,18px);font-style:italic;line-height:1.78;color:rgba(251,247,244,.62);flex-grow:1}
+.quote-stars{display:flex;gap:2px;color:var(--rose);font-size:10px}
+.quote-author{display:flex;align-items:center;gap:11px;padding-top:14px;border-top:1px solid rgba(251,247,244,.06)}
+.quote-av{width:36px;height:36px;border-radius:50%;overflow:hidden;border:1px solid rgba(212,165,160,.22);flex-shrink:0}
+.quote-av img{width:100%;height:100%;object-fit:cover}
+.quote-name{font-size:11px;font-weight:400;color:var(--cream);letter-spacing:.04em}
+.quote-ctx{font-size:8px;color:rgba(251,247,244,.25);letter-spacing:.1em;text-transform:uppercase;margin-top:2px;font-weight:300}
+
+/* ══ PROCESSUS ══ */
+.process-spread{background:var(--powder);color:var(--ink);padding:clamp(76px,9vw,132px) clamp(20px,5vw,80px);position:relative;overflow:hidden}
+.process-spread::after{content:'05';position:absolute;right:-2%;bottom:-6%;font-family:'Cormorant Garamond',serif;font-size:clamp(120px,24vw,340px);font-weight:300;color:rgba(26,17,24,.05);line-height:1;pointer-events:none;user-select:none}
+.process-label{font-size:8.5px;letter-spacing:.38em;text-transform:uppercase;color:var(--rose);display:flex;align-items:center;gap:13px;margin-bottom:16px;font-weight:400}
+.process-label::before{content:'';width:26px;height:1px;background:var(--rose)}
+.process-hed{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,7vw,92px);font-weight:300;letter-spacing:-.03em;line-height:.9;color:var(--ink);margin-bottom:clamp(52px,6.5vw,84px)}
+.process-hed em{font-style:italic;display:block;color:var(--mink)}
+.process-steps{display:grid;grid-template-columns:repeat(5,1fr);position:relative}
+.process-steps::before{content:'';position:absolute;top:20px;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--faint),rgba(26,17,24,.04),var(--faint))}
+.ps{padding:0 clamp(7px,1.8vw,20px)}
+.ps-dot{width:40px;height:40px;border:1px solid rgba(26,17,24,.14);border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--powder);position:relative;z-index:1;margin-bottom:22px;transition:background .3s,border-color .3s}
+.ps:hover .ps-dot{background:var(--rose);border-color:var(--rose)}
+.ps-dot-num{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;color:var(--off-lt);transition:color .3s}
+.ps:hover .ps-dot-num{color:var(--cream)}
+.ps-title{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,1.8vw,23px);font-weight:400;color:var(--ink);margin-bottom:7px;letter-spacing:.02em}
+.ps-text{font-size:11px;font-weight:300;color:var(--off);line-height:1.72;letter-spacing:.01em}
+
+/* ══ FAQ ══ */
+.faq-spread{background:var(--ink);padding:clamp(76px,9vw,132px) clamp(20px,5vw,80px)}
+.faq-layout{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(40px,5.5vw,92px);align-items:start}
+.faq-left-rubric{font-size:8.5px;letter-spacing:.38em;text-transform:uppercase;color:var(--rose);display:flex;align-items:center;gap:13px;margin-bottom:16px;font-weight:400}
+.faq-left-rubric::before{content:'';width:26px;height:1px;background:var(--rose)}
+.faq-left-title{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,6vw,82px);font-weight:300;line-height:.9;letter-spacing:-.03em;color:var(--cream);margin-bottom:32px}
+.faq-left-title em{font-style:italic;display:block;color:var(--rose)}
+.faq-left-deck{font-family:'EB Garamond',serif;font-size:clamp(13px,1.45vw,16.5px);font-style:italic;color:rgba(251,247,244,.36);line-height:1.82}
+.faq-items{display:flex;flex-direction:column}
+.faq-i{border-bottom:1px solid rgba(251,247,244,.07);overflow:hidden}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:clamp(15px,2vw,24px) 0;text-align:left;cursor:pointer;background:none}
+.faq-q-text{font-family:'Cormorant Garamond',serif;font-size:clamp(15px,1.8vw,21px);font-weight:400;color:var(--cream);letter-spacing:.01em;transition:color .3s;line-height:1.22;padding-right:13px}
+.faq-i.open .faq-q-text{color:var(--rose)}
+.faq-icon{flex-shrink:0;width:25px;height:25px;border:1px solid rgba(251,247,244,.14);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .4s,background .3s,border-color .3s}
+.faq-i.open .faq-icon{transform:rotate(45deg);background:var(--rose);border-color:var(--rose)}
+.faq-icon svg{width:10px;height:10px;stroke:var(--cream);transition:stroke .3s}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.16,1,.3,1)}
+.faq-a-inner{padding:0 0 clamp(15px,2vw,24px);font-size:clamp(12.5px,1.35vw,15px);font-weight:300;color:rgba(251,247,244,.4);line-height:1.87;letter-spacing:.01em}
+
+/* ══ RÉSERVATION ══ */
+.cta-spread{min-height:100svh;background:var(--ink);position:relative;overflow:hidden;display:flex;align-items:center;padding:clamp(96px,11vw,152px) clamp(20px,5vw,80px)}
+.cta-bg-photo{position:absolute;right:0;top:0;bottom:0;width:44%;opacity:.18}
+.cta-bg-photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(25%) saturate(.88)}
+.cta-bg-photo::before{content:'';position:absolute;left:0;top:0;bottom:0;width:65%;background:linear-gradient(to right,var(--ink),transparent);z-index:1}
+.cta-bg-bloom{position:absolute;top:50%;left:5%;transform:translate(-50%,-50%);width:580px;height:580px;border-radius:50%;background:radial-gradient(circle,rgba(212,165,160,.07) 0%,transparent 65%);pointer-events:none}
+.cta-content{position:relative;z-index:2;max-width:680px}
+.cta-issue{font-size:8.5px;letter-spacing:.38em;text-transform:uppercase;color:var(--rose);margin-bottom:18px;display:flex;align-items:center;gap:13px;font-weight:400}
+.cta-issue::before{content:'';width:26px;height:1px;background:var(--rose)}
+.cta-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(50px,9vw,118px);font-weight:300;line-height:.88;letter-spacing:-.03em;color:var(--cream);margin-bottom:32px}
+.cta-headline em{font-style:italic;display:block;color:var(--rose)}
+.cta-deck{font-family:'EB Garamond',serif;font-size:clamp(14px,1.6vw,18px);font-style:italic;color:rgba(251,247,244,.42);line-height:1.82;max-width:440px;margin-bottom:48px}
+.cta-actions{display:flex;align-items:center;gap:clamp(16px,2.5vw,32px);flex-wrap:wrap}
+.cta-btn-main{display:inline-flex;align-items:center;gap:13px;padding:17px 44px;background:var(--rose);color:var(--cream);font-size:8.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;position:relative;overflow:hidden;transition:color .4s}
+.cta-btn-main::before{content:'';position:absolute;inset:0;background:var(--champagne);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.cta-btn-main:hover::before{transform:scaleX(1)}
+.cta-btn-main span{position:relative;z-index:1}
+.cta-btn-phone{display:flex;align-items:center;gap:9px;font-size:8.5px;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(251,247,244,.32);transition:color .3s}
+.cta-btn-phone:hover{color:rgba(251,247,244,.72)}
+.cta-btn-phone svg{width:13px;height:13px;stroke:currentColor;stroke-width:1.2;fill:none}
+.cta-proof{margin-top:48px;display:flex;align-items:center;gap:16px;padding-top:32px;border-top:1px solid rgba(251,247,244,.07)}
+.cta-proof-avs{display:flex}
+.cta-proof-av{width:32px;height:32px;border-radius:50%;overflow:hidden;border:2px solid rgba(212,165,160,.22);margin-left:-6px;background:rgba(251,247,244,.05)}
+.cta-proof-av:first-child{margin-left:0}
+.cta-proof-av img{width:100%;height:100%;object-fit:cover}
+.cta-proof-text strong{display:block;font-size:11px;font-weight:400;color:var(--cream)}
+.cta-proof-text span{font-size:9px;color:rgba(251,247,244,.26);letter-spacing:.1em;font-weight:300}
+
+/* ══ FOOTER ══ */
+footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:clamp(24px,3.5vw,56px);padding-bottom:40px;border-bottom:1px solid rgba(251,247,244,.05);margin-bottom:24px}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.5vw,28px);font-weight:300;letter-spacing:.1em;color:var(--cream);margin-bottom:12px}
+.f-tag{font-size:10px;font-weight:300;color:rgba(251,247,244,.2);line-height:1.8;max-width:210px;letter-spacing:.02em;margin-bottom:22px}
+.f-social{display:flex;gap:9px}
+.f-soc-a{width:28px;height:28px;border:1px solid rgba(251,247,244,.08);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(251,247,244,.22);font-size:11px;transition:border-color .3s,color .3s}
+.f-soc-a:hover{border-color:var(--rose);color:var(--rose)}
+.f-col-title{font-size:7.5px;letter-spacing:.38em;text-transform:uppercase;color:var(--rose);font-weight:400;margin-bottom:16px}
+.f-links{list-style:none;display:flex;flex-direction:column;gap:8px}
+.f-links a{font-size:11px;font-weight:300;color:rgba(251,247,244,.25);letter-spacing:.02em;transition:color .3s,padding-left .3s}
+.f-links a:hover{color:var(--cream);padding-left:4px}
+.f-contact-line{font-size:10px;font-weight:300;color:rgba(251,247,244,.26);line-height:1.82;letter-spacing:.02em;margin-bottom:5px}
+.f-contact-line strong{color:rgba(251,247,244,.38);font-weight:400;display:block;font-size:8px;letter-spacing:.2em;text-transform:uppercase}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:9px}
+.f-copy{font-size:8px;color:rgba(251,247,244,.12);letter-spacing:.1em;font-weight:300}
+.f-legal{display:flex;gap:16px}
+.f-legal a{font-size:8px;color:rgba(251,247,244,.12);letter-spacing:.08em;transition:color .3s}
+.f-legal a:hover{color:rgba(251,247,244,.36)}
+
+/* ══ FLOATING CTA ══ */
+#ftcta{position:fixed;bottom:22px;right:22px;z-index:400;opacity:0;transform:translateY(12px);transition:opacity .4s,transform .4s;pointer-events:none}
+#ftcta.on{opacity:1;transform:translateY(0);pointer-events:all}
+#ftcta a{display:flex;align-items:center;gap:8px;padding:11px 18px;background:var(--rose);color:var(--cream);font-size:8.5px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;box-shadow:0 7px 32px rgba(212,165,160,.32);transition:background .3s,transform .3s}
+#ftcta a:hover{background:var(--mink);transform:scale(1.03)}
+.ft-dot{width:5px;height:5px;background:var(--cream);border-radius:50%;animation:pdot 1.9s ease infinite}
+@keyframes pdot{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.7);opacity:.3}}
+
+/* ══ REVEAL ══ */
+.r{opacity:0;transform:translateY(26px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+.r.on{opacity:1;transform:none}
+.rl{opacity:0;transform:translateX(-26px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+.rl.on{opacity:1;transform:none}
+.rr{opacity:0;transform:translateX(26px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+.rr.on{opacity:1;transform:none}
+.d1{transition-delay:.1s!important}.d2{transition-delay:.2s!important}
+.d3{transition-delay:.3s!important}.d4{transition-delay:.4s!important}
+.d5{transition-delay:.5s!important}.d6{transition-delay:.6s!important}
+
+/* ══ RESPONSIVE ══ */
+@media(max-width:1024px){
+  .cover{grid-template-columns:1fr;grid-template-rows:auto 50vw}
+  .cover-right{display:block!important;position:relative;overflow:hidden}
+  .cover-right img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .dbl{grid-template-columns:1fr}
+  .dbl-photo{min-height:60vw;aspect-ratio:auto}
+  .services-ed-header{grid-template-columns:1fr}
+  .ba-grid{grid-template-columns:1fr 1fr}
+  .quotes-grid{grid-template-columns:1fr 1fr}
+  .process-steps{grid-template-columns:repeat(3,1fr);row-gap:40px}
+  .process-steps::before{display:none}
+  .faq-layout{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .carousel-card:nth-child(1){transform:rotateY(  0deg) translateZ(clamp(200px,30vw,360px))}
+  .carousel-card:nth-child(2){transform:rotateY( 60deg) translateZ(clamp(200px,30vw,360px))}
+  .carousel-card:nth-child(3){transform:rotateY(120deg) translateZ(clamp(200px,30vw,360px))}
+  .carousel-card:nth-child(4){transform:rotateY(180deg) translateZ(clamp(200px,30vw,360px))}
+  .carousel-card:nth-child(5){transform:rotateY(240deg) translateZ(clamp(200px,30vw,360px))}
+  .carousel-card:nth-child(6){transform:rotateY(300deg) translateZ(clamp(200px,30vw,360px))}
+}
+@media(max-width:768px){
+  .cover{grid-template-rows:auto 60vw}
+  .manifeste-inner{grid-template-columns:1fr}
+  .manifeste-num{display:none}
+  .manifeste-body{column-count:1}
+  .ba-grid{grid-template-columns:1fr 1fr}
+  .quotes-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr}
+  .mast-nav{display:none}
+  .mast-btn{display:none}
+  .mast-hbg{display:flex}
+  .srow-desc{display:none}
+  .service-row{grid-template-columns:42px 1fr auto}
+  .cta-bg-photo{width:100%;opacity:.06}
+  .carousel-track{
+    width:clamp(160px,48vw,240px);
+    height:clamp(200px,60vw,320px);
+  }
+  .carousel-card:nth-child(1){transform:rotateY(  0deg) translateZ(clamp(140px,44vw,220px))}
+  .carousel-card:nth-child(2){transform:rotateY( 60deg) translateZ(clamp(140px,44vw,220px))}
+  .carousel-card:nth-child(3){transform:rotateY(120deg) translateZ(clamp(140px,44vw,220px))}
+  .carousel-card:nth-child(4){transform:rotateY(180deg) translateZ(clamp(140px,44vw,220px))}
+  .carousel-card:nth-child(5){transform:rotateY(240deg) translateZ(clamp(140px,44vw,220px))}
+  .carousel-card:nth-child(6){transform:rotateY(300deg) translateZ(clamp(140px,44vw,220px))}
+}
+@media(max-width:520px){
+  .cover{grid-template-rows:auto 70vw}
+  .ba-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  #mast{grid-template-columns:1fr auto auto}
+  .cover-stats{gap:16px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .carousel-track{animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader" role="presentation" aria-hidden="true">
+  <div class="ld-word"><span class="w1">É</span><span class="w2">l</span><span class="w3">i</span><span class="w4">s</span><span class="w5">e</span></div>
+  <div class="ld-sep"></div>
+  <div class="ld-sub">Beauty Artist · Paris</div>
+</div>
+
+<!-- MOBILE MENU -->
+<div id="mob-menu" role="dialog" aria-label="Menu de navigation">
+  <a href="#manifeste">À propos</a>
+  <a href="#prestations">Prestations</a>
+  <a href="#galerie">Portfolio</a>
+  <a href="#temoignages">Témoignages</a>
+  <a href="#reservation">Réservation</a>
+</div>
+
+<!-- MASTHEAD -->
+<nav id="mast" role="navigation" aria-label="Navigation principale">
+  <div class="mast-left"></div>
+  <a href="#" class="mast-logo">Élise Marceau</a>
+  <div class="mast-right">
+    <ul class="mast-nav">
+      <li><a href="#manifeste">À propos</a></li>
+      <li><a href="#prestations">Prestations</a></li>
+      <li><a href="#galerie">Portfolio</a></li>
+      <li><a href="#temoignages">Avis</a></li>
+    </ul>
+    <a href="#reservation" class="mast-btn" aria-label="Réserver une prestation">Réserver</a>
+    <button class="mast-hbg" id="hbg" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main>
+
+<!-- ══ COVER ══ -->
+<section class="cover" aria-label="Page d'accueil">
+  <div class="cover-left">
+    <div class="cover-eyebrow r">Beauty Artist · Paris</div>
+    <div class="cover-hed-wrap">
+      <h1 class="cover-hed r d1">L'art<br>de<br><em>révéler.</em></h1>
+      <p class="cover-deck r d2">Une expérience beauté d'exception, pensée pour sublimer chaque visage unique.</p>
+      <div class="cover-ctas r d3">
+        <a href="#reservation" class="cover-btn-main"><span>Prendre rendez-vous</span></a>
+        <a href="#galerie" class="cover-btn-sec">Découvrir le portfolio</a>
+      </div>
+    </div>
+    <div class="cover-stats r d4">
+      <div class="cov-stat">
+        <div class="cov-stat-n"><span class="counter" data-t="847">0</span><sup>+</sup></div>
+        <div class="cov-stat-l">Sublimées</div>
+      </div>
+      <div class="cov-stat">
+        <div class="cov-stat-n"><span class="counter" data-t="247">0</span><sup>★</sup></div>
+        <div class="cov-stat-l">Avis 5 ★</div>
+      </div>
+      <div class="cov-stat">
+        <div class="cov-stat-n"><span class="counter" data-t="12">0</span></div>
+        <div class="cov-stat-l">Années d'art</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-right">
+    <img
+      src="https://images.unsplash.com/photo-1487412947147-5cebf96b8735?w=1200&q=90&auto=format&fit=crop"
+      alt="Portrait éditorial beauté — Élise Marceau"
+      fetchpriority="high"
+    >
+    <div class="cover-vogue-bg" aria-hidden="true"><span>BEAUTÉ</span></div>
+    <div class="cover-dots" aria-hidden="true"></div>
+    <div class="cover-caption" aria-hidden="true">Paris · Île-de-France</div>
+  </div>
+
+  <div class="scroll-ind" aria-hidden="true">
+    <span class="scroll-ind-text">Scroll</span>
+    <div class="scroll-ind-line"></div>
+  </div>
+</section>
+
+<!-- ══ MANIFESTE ══ -->
+<section class="manifeste" id="manifeste" aria-labelledby="manifeste-title">
+  <div class="manifeste-inner">
+    <div class="manifeste-num r" aria-hidden="true">01</div>
+    <div class="manifeste-text-block">
+      <div class="manifeste-rubric r d1">À propos</div>
+      <h2 class="manifeste-drop r d2" id="manifeste-title">Chaque visage<br>est une <em>toile</em><br>singulière.</h2>
+      <div class="manifeste-body r d3">
+        Diplômée de l'École Internationale de Beauté de Paris, <strong>j'ai accompagné plus de 847 femmes</strong> lors des moments les plus précieux de leur vie. Mon approche conjugue rigueur technique, sens artistique et écoute profonde.
+        <br><br>
+        Mon rôle n'est pas de vous transformer. C'est de <strong>révéler ce que vous avez de plus lumineux</strong> — d'amplifier votre beauté naturelle avec un raffinement qui s'efface au profit de vous. J'utilise exclusivement des produits de niche et haut de gamme, sélectionnés pour leur performance et leur rendu.
+      </div>
+      <div class="manifeste-sig r d4">Élise</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DOUBLE PAGE ══ -->
+<section class="dbl" aria-label="Portrait éditorial expertise">
+  <div class="dbl-photo rl">
+    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&q=88&auto=format&fit=crop" alt="Maquillage mariage élégant — Élise Marceau" loading="lazy">
+    <div class="dbl-caption"><span class="dbl-cap-text">Mariage · Château de Vaux-le-Vicomte</span></div>
+  </div>
+  <div class="dbl-text rr">
+    <div class="dbl-issue">Expertise</div>
+    <h2 class="dbl-title">12 ans<br>de <em>passion</em></h2>
+    <p class="dbl-body">"Le luxe véritable, c'est quand le maquillage disparaît et qu'il ne reste que vous — sublimée."</p>
+    <div class="dbl-stats">
+      <div>
+        <div class="dbl-stat-n"><span class="counter" data-t="847">0</span><sup>+</sup></div>
+        <div class="dbl-stat-l">Femmes sublimées</div>
+      </div>
+      <div>
+        <div class="dbl-stat-n"><span class="counter" data-t="247">0</span><sup>★</sup></div>
+        <div class="dbl-stat-l">Avis 5 étoiles</div>
+      </div>
+      <div>
+        <div class="dbl-stat-n"><span class="counter" data-t="12">0</span></div>
+        <div class="dbl-stat-l">Années d'art</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRESTATIONS ══ -->
+<section class="services-ed" id="prestations" aria-labelledby="serv-title">
+  <div class="services-ed-header">
+    <div>
+      <div class="r" style="font-size:8.5px;letter-spacing:.38em;text-transform:uppercase;color:var(--rose);margin-bottom:14px;display:flex;align-items:center;gap:13px;font-weight:400"><span style="width:26px;height:1px;background:var(--rose);display:inline-block;flex-shrink:0"></span>Prestations</div>
+      <h2 class="services-ed-big r d1" id="serv-title">Mes<br><em>offres</em></h2>
+    </div>
+    <div class="services-ed-intro r d2">
+      <p>Du mariage au shooting éditorial, chaque prestation est une expérience unique et entièrement personnalisée.</p>
+      <p>Survolez pour explorer.</p>
+    </div>
+  </div>
+  <div class="services-list r d2" role="list">
+    <div class="service-row" role="listitem"><span class="srow-num">01</span><span class="srow-name">Maquillage <em>Mariage</em></span><span class="srow-desc">Essai inclus · Kit retouche offert</span><span class="srow-price">À partir de 280 €</span></div>
+    <div class="service-row" role="listitem"><span class="srow-num">02</span><span class="srow-name">Soirée & <em>Événement</em></span><span class="srow-desc">Résultat longue tenue</span><span class="srow-price">À partir de 120 €</span></div>
+    <div class="service-row" role="listitem"><span class="srow-num">03</span><span class="srow-name">Mise en <em>Beauté</em></span><span class="srow-desc">Conseil & soin intégrés</span><span class="srow-price">À partir de 90 €</span></div>
+    <div class="service-row" role="listitem"><span class="srow-num">04</span><span class="srow-name">Cours de <em>Maquillage</em></span><span class="srow-desc">Individuel ou en groupe</span><span class="srow-price">À partir de 150 €</span></div>
+    <div class="service-row" role="listitem"><span class="srow-num">05</span><span class="srow-name">Shooting <em>Photo</em></span><span class="srow-desc">Collaboration artistique</span><span class="srow-price">Sur devis</span></div>
+    <div class="service-row" role="listitem"><span class="srow-num">06</span><span class="srow-name">Prestation <em>VIP</em></span><span class="srow-desc">À domicile · Service exclusif</span><span class="srow-price">Sur devis</span></div>
+  </div>
+</section>
+
+<!-- ══ GALERIE — CAROUSEL 3D ══ -->
+<section class="gallery-film" id="galerie" aria-labelledby="gallery-title">
+
+  <!-- pétales flottantes -->
+  <div class="petal" aria-hidden="true"></div>
+  <div class="petal" aria-hidden="true"></div>
+  <div class="petal" aria-hidden="true"></div>
+  <div class="petal" aria-hidden="true"></div>
+  <div class="petal" aria-hidden="true"></div>
+  <div class="petal" aria-hidden="true"></div>
+  <div class="petal" aria-hidden="true"></div>
+
+  <div class="gallery-film-header">
+    <h2 class="gallery-film-title r" id="gallery-title"><em>Port</em>folio</h2>
+    <span class="gallery-film-sub r d1">Survolez pour marquer une pause</span>
+  </div>
+
+  <div class="carousel-scene" role="region" aria-label="Carousel portfolio">
+    <div class="carousel-track" id="carouselTrack" aria-live="polite">
+
+      <article class="carousel-card">
+        <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=700&q=82&auto=format&fit=crop" alt="Look mariage bridal glamour" loading="lazy">
+        <div class="carousel-card-overlay" aria-hidden="true"></div>
+        <div class="carousel-card-info">
+          <span class="carousel-card-label">Mariage</span>
+          <span class="carousel-card-sub">Bridal · Longue tenue</span>
+        </div>
+      </article>
+
+      <article class="carousel-card">
+        <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=550&q=82&auto=format&fit=crop" alt="Maquillage éditorial beauté" loading="lazy">
+        <div class="carousel-card-overlay" aria-hidden="true"></div>
+        <div class="carousel-card-info">
+          <span class="carousel-card-label">Éditorial</span>
+          <span class="carousel-card-sub">Editorial · Presse</span>
+        </div>
+      </article>
+
+      <article class="carousel-card">
+        <img src="https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?w=800&q=82&auto=format&fit=crop" alt="Shooting photo prestation beauté" loading="lazy">
+        <div class="carousel-card-overlay" aria-hidden="true"></div>
+        <div class="carousel-card-info">
+          <span class="carousel-card-label">Shooting</span>
+          <span class="carousel-card-sub">Artistique · Mode</span>
+        </div>
+      </article>
+
+      <article class="carousel-card">
+        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=550&q=82&auto=format&fit=crop" alt="Maquillage soirée événement" loading="lazy">
+        <div class="carousel-card-overlay" aria-hidden="true"></div>
+        <div class="carousel-card-info">
+          <span class="carousel-card-label">Soirée</span>
+          <span class="carousel-card-sub">Gala · Prestige</span>
+        </div>
+      </article>
+
+      <article class="carousel-card">
+        <img src="https://images.unsplash.com/photo-1503236823255-94609f598e71?w=650&q=82&auto=format&fit=crop" alt="Portrait beauté naturelle sublimée" loading="lazy">
+        <div class="carousel-card-overlay" aria-hidden="true"></div>
+        <div class="carousel-card-info">
+          <span class="carousel-card-label">Portrait</span>
+          <span class="carousel-card-sub">Naturel · Lumineux</span>
+        </div>
+      </article>
+
+      <article class="carousel-card">
+        <img src="https://images.unsplash.com/photo-1515688594390-b649af70d282?w=550&q=82&auto=format&fit=crop" alt="Maquillage naturel élégant" loading="lazy">
+        <div class="carousel-card-overlay" aria-hidden="true"></div>
+        <div class="carousel-card-info">
+          <span class="carousel-card-label">Naturel</span>
+          <span class="carousel-card-sub">No-makeup · Éclat</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div class="carousel-controls" role="group" aria-label="Contrôles carousel">
+    <button class="carousel-btn" id="carouselPrev" aria-label="Précédent">
+      <svg viewBox="0 0 10 10"><path d="M6 2L3 5l3 3"/></svg>
+    </button>
+    <div class="carousel-dots" role="tablist" aria-label="Navigation portfolio">
+      <button class="carousel-dot act" role="tab" aria-selected="true" aria-label="Photo 1" data-i="0"></button>
+      <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Photo 2" data-i="1"></button>
+      <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Photo 3" data-i="2"></button>
+      <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Photo 4" data-i="3"></button>
+      <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Photo 5" data-i="4"></button>
+      <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Photo 6" data-i="5"></button>
+    </div>
+    <button class="carousel-btn" id="carouselNext" aria-label="Suivant">
+      <svg viewBox="0 0 10 10"><path d="M4 2l3 3-3 3"/></svg>
+    </button>
+  </div>
+  <p class="carousel-hint" aria-hidden="true">Survolez le carousel · Utilisez les flèches pour naviguer</p>
+
+</section>
+
+<!-- ══ AVANT / APRÈS ══ -->
+<section class="ba-spread" id="avant-apres" aria-labelledby="ba-title">
+  <div class="ba-header">
+    <h2 class="ba-title r" id="ba-title">Avant<br><em>après.</em></h2>
+    <p class="ba-hint r d1">Glissez le curseur pour révéler la transformation.</p>
+  </div>
+  <div class="ba-grid">
+
+    <div class="ba-card r">
+      <div class="ba-slider-wrap" data-slider>
+        <img class="ba-img" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=82&auto=format&fit=crop" alt="Avant — maquillage mariage" loading="lazy">
+        <img class="ba-img ba-img-after" src="https://images.unsplash.com/photo-1487412947147-5cebf96b8735?w=600&q=82&auto=format&fit=crop" alt="Après — maquillage mariage" loading="lazy">
+        <div class="ba-tags"><span class="ba-tag ba-tag-b">Avant</span><span class="ba-tag ba-tag-a">Après</span></div>
+        <div class="ba-slider-line"></div>
+        <div class="ba-handle"><svg viewBox="0 0 16 16"><path d="M5 8H1M1 8l3-3M1 8l3 3M11 8h4M15 8l-3-3M15 8l-3 3"/></svg></div>
+      </div>
+      <div><div class="ba-label">Maquillage Mariage</div><div class="ba-sub">Look naturel & longue tenue</div></div>
+    </div>
+
+    <div class="ba-card r d1">
+      <div class="ba-slider-wrap" data-slider>
+        <img class="ba-img" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=82&auto=format&fit=crop" alt="Avant — maquillage soirée" loading="lazy">
+        <img class="ba-img ba-img-after" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=82&auto=format&fit=crop" alt="Après — maquillage soirée" loading="lazy">
+        <div class="ba-tags"><span class="ba-tag ba-tag-b">Avant</span><span class="ba-tag ba-tag-a">Après</span></div>
+        <div class="ba-slider-line"></div>
+        <div class="ba-handle"><svg viewBox="0 0 16 16"><path d="M5 8H1M1 8l3-3M1 8l3 3M11 8h4M15 8l-3-3M15 8l-3 3"/></svg></div>
+      </div>
+      <div><div class="ba-label">Soirée Gala</div><div class="ba-sub">Look dramatique & sophistiqué</div></div>
+    </div>
+
+    <div class="ba-card r d2">
+      <div class="ba-slider-wrap" data-slider>
+        <img class="ba-img" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=82&auto=format&fit=crop" alt="Avant — mise en beauté" loading="lazy">
+        <img class="ba-img ba-img-after" src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=600&q=82&auto=format&fit=crop" alt="Après — mise en beauté" loading="lazy">
+        <div class="ba-tags"><span class="ba-tag ba-tag-b">Avant</span><span class="ba-tag ba-tag-a">Après</span></div>
+        <div class="ba-slider-line"></div>
+        <div class="ba-handle"><svg viewBox="0 0 16 16"><path d="M5 8H1M1 8l3-3M1 8l3 3M11 8h4M15 8l-3-3M15 8l-3 3"/></svg></div>
+      </div>
+      <div><div class="ba-label">Mise en Beauté</div><div class="ba-sub">Éclat naturel sublimé</div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ TÉMOIGNAGES ══ -->
+<section class="quotes-spread" id="temoignages" aria-labelledby="quotes-title">
+  <div class="quotes-header">
+    <h2 class="quotes-title r" id="quotes-title">Elles <em>témoignent.</em></h2>
+    <span class="quotes-count r d2">247 avis 5 étoiles</span>
+  </div>
+  <div class="quotes-grid">
+    <blockquote class="quote-cell r">
+      <div class="quote-mark" aria-hidden="true">"</div>
+      <p class="quote-body">Élise a su capturer exactement ce que je rêvais sans même pouvoir l'exprimer. Mon maquillage était parfait du matin jusqu'au dernier slow. Je recommande les yeux fermés.</p>
+      <div class="quote-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+      <footer class="quote-author">
+        <div class="quote-av"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&q=80" alt="" loading="lazy"></div>
+        <div><div class="quote-name">Mathilde D.</div><div class="quote-ctx">Mariage · Vaux-le-Vicomte</div></div>
+      </footer>
+    </blockquote>
+    <blockquote class="quote-cell r d2">
+      <div class="quote-mark" aria-hidden="true">"</div>
+      <p class="quote-body">Un professionnalisme absolu, une douceur dans les gestes, et un résultat qui dépasse toutes mes espérances. J'ai reçu des compliments toute la soirée. Merci Élise.</p>
+      <div class="quote-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+      <footer class="quote-author">
+        <div class="quote-av"><img src="https://images.unsplash.com/photo-1535468850893-d6e543fbd7f5?w=80&q=80" alt="" loading="lazy"></div>
+        <div><div class="quote-name">Claire M.</div><div class="quote-ctx">Soirée gala · Paris 8ème</div></div>
+      </footer>
+    </blockquote>
+    <blockquote class="quote-cell r d4">
+      <div class="quote-mark" aria-hidden="true">"</div>
+      <p class="quote-body">La prestation VIP à domicile était une expérience hors du commun. Comme si une artiste peintre travaillait sur mon visage. La discrétion, le soin du détail… inoubliable.</p>
+      <div class="quote-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+      <footer class="quote-author">
+        <div class="quote-av"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=80&q=80" alt="" loading="lazy"></div>
+        <div><div class="quote-name">Alexandra V.</div><div class="quote-ctx">Prestation VIP · Neuilly</div></div>
+      </footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ══ PROCESSUS ══ -->
+<section class="process-spread" id="processus" aria-labelledby="process-title">
+  <div class="process-label r">Le processus</div>
+  <h2 class="process-hed r d1" id="process-title">Une expérience<br><em>fluide</em></h2>
+  <div class="process-steps" role="list">
+    <div class="ps r d1" role="listitem"><div class="ps-dot"><span class="ps-dot-num">1</span></div><h3 class="ps-title">Contact</h3><p class="ps-text">Échangeons. Je réponds sous 24h pour connaître votre projet.</p></div>
+    <div class="ps r d2" role="listitem"><div class="ps-dot"><span class="ps-dot-num">2</span></div><h3 class="ps-title">Diagnostic</h3><p class="ps-text">Analyse de votre peau, carnation, et de vos désirs beauté.</p></div>
+    <div class="ps r d3" role="listitem"><div class="ps-dot"><span class="ps-dot-num">3</span></div><h3 class="ps-title">Réservation</h3><p class="ps-text">Confirmation, devis détaillé, acompte de 30%.</p></div>
+    <div class="ps r d4" role="listitem"><div class="ps-dot"><span class="ps-dot-num">4</span></div><h3 class="ps-title">Réalisation</h3><p class="ps-text">Le jour J, je prends tout en charge pour que vous profitiez.</p></div>
+    <div class="ps r d5" role="listitem"><div class="ps-dot"><span class="ps-dot-num">5</span></div><h3 class="ps-title">Suivi</h3><p class="ps-text">Guide beauté personnalisé offert, conseils post-prestation.</p></div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="faq-spread" id="faq" aria-labelledby="faq-title">
+  <div class="faq-layout">
+    <div class="faq-left">
+      <div class="faq-left-rubric r">Questions</div>
+      <h2 class="faq-left-title r d1" id="faq-title">Vos<br><em>doutes</em><br>levés.</h2>
+      <p class="faq-left-deck r d2">Tout ce que vous avez besoin de savoir avant de réserver.</p>
+    </div>
+    <div class="faq-items r d1">
+      <div class="faq-i">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Combien de temps dure un maquillage mariage ?</span><div class="faq-icon" aria-hidden="true"><svg viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke-linecap="round"/></svg></div></button>
+        <div class="faq-a"><div class="faq-a-inner">Entre 1h30 et 2h. Avec coiffure, comptez 2h30 à 3h. L'essai préalable, inclus dans la formule mariage, dure environ 2h et se déroule 1 à 2 mois avant le jour J.</div></div>
+      </div>
+      <div class="faq-i">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Vous déplacez-vous en dehors de Paris ?</span><div class="faq-icon" aria-hidden="true"><svg viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke-linecap="round"/></svg></div></button>
+        <div class="faq-a"><div class="faq-a-inner">Partout en Île-de-France sans supplément, et dans toute la France pour les mariages et événements importants. Pour les destinations internationales, nous convenons ensemble des modalités.</div></div>
+      </div>
+      <div class="faq-i">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Quels produits utilisez-vous ?</span><div class="faq-icon" aria-hidden="true"><svg viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke-linecap="round"/></svg></div></button>
+        <div class="faq-a"><div class="faq-a-inner">Exclusivement des produits haut de gamme : Charlotte Tilbury, Armani Beauty, NARS, MAC Cosmetics, Dior Beauty. Tout le matériel est désinfecté après chaque prestation.</div></div>
+      </div>
+      <div class="faq-i">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Quels sont les délais de réservation ?</span><div class="faq-icon" aria-hidden="true"><svg viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke-linecap="round"/></svg></div></button>
+        <div class="faq-a"><div class="faq-a-inner">Pour les mariages, je recommande 6 à 12 mois à l'avance, surtout au printemps et en été. Pour les événements, 2 à 4 semaines suffisent en général.</div></div>
+      </div>
+      <div class="faq-i">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Proposez-vous des formules groupe ?</span><div class="faq-icon" aria-hidden="true"><svg viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke-linecap="round"/></svg></div></button>
+        <div class="faq-a"><div class="faq-a-inner">Oui — formules mariée + demoiselles d'honneur avec tarifs dégressifs à partir de 3 personnes. Je m'adapte au timing de votre matinée pour que tout se passe dans la sérénité.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RÉSERVATION ══ -->
+<section class="cta-spread" id="reservation" aria-labelledby="cta-title">
+  <div class="cta-bg-bloom" aria-hidden="true"></div>
+  <div class="cta-bg-photo" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1487412947147-5cebf96b8735?w=900&q=80&auto=format&fit=crop" alt="" loading="lazy">
+  </div>
+  <div class="cta-content">
+    <div class="cta-issue r">Réservation</div>
+    <h2 class="cta-headline r d1" id="cta-title">Votre<br>plus beau<br><em>jour.</em></h2>
+    <p class="cta-deck r d2">Les créneaux se remplissent vite, surtout pour la saison des mariages. Réservez dès maintenant pour garantir votre date et vivre l'expérience qui vous correspond.</p>
+    <div class="cta-actions r d3">
+      <a href="mailto:contact@elisemarceau.fr?subject=Demande%20de%20réservation" class="cta-btn-main"><span>Réserver par email</span></a>
+      <a href="tel:+33612345678" class="cta-btn-phone" aria-label="Appeler le 06 12 34 56 78">
+        <svg viewBox="0 0 14 14"><path d="M2 1h3l1.5 3.5L5 6s1.5 3 4 4l1.5-1.5L14 10v3s-2 1.5-7-2.5S.5 4 2 1z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        06 12 34 56 78
+      </a>
+    </div>
+    <div class="cta-proof r d4">
+      <div class="cta-proof-avs" aria-hidden="true">
+        <div class="cta-proof-av"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&q=80" alt=""></div>
+        <div class="cta-proof-av"><img src="https://images.unsplash.com/photo-1535468850893-d6e543fbd7f5?w=80&q=80" alt=""></div>
+        <div class="cta-proof-av"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=80&q=80" alt=""></div>
+        <div class="cta-proof-av"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=80&q=80" alt=""></div>
+      </div>
+      <div class="cta-proof-text">
+        <strong>+247 clientes satisfaites</strong>
+        <span>100% de recommandation · Mariages 2025</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div style="max-width:1400px;margin:0 auto">
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo">Élise Marceau</div>
+        <p class="f-tag">Beauty Artist haut de gamme à Paris. L'art de révéler votre beauté unique depuis 2012.</p>
+        <div class="f-social" aria-label="Réseaux sociaux">
+          <a href="#" class="f-soc-a" aria-label="Instagram"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="1" y="1" width="10" height="10" rx="3"/><circle cx="6" cy="6" r="2.2"/><circle cx="9" cy="3" r=".5" fill="currentColor"/></svg></a>
+          <a href="#" class="f-soc-a" aria-label="Pinterest"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="6" cy="6" r="5"/><path d="M4.5 7c.4.8 1.2 1.5 2 1.5 1.4 0 2.5-1.2 2.5-2.8C9 4 7.8 3 6 3 4 3 2.5 4.3 2.5 5.8c0 .8.4 1.7 1.2 2l.3-1.2"/></svg></a>
+          <a href="#" class="f-soc-a" aria-label="TikTok"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M7 1c.4 1.5 1.5 2.3 3 2.3v1.5c-1.5 0-2.8-.7-3-1.5V8c0 1.5-1.2 2.7-2.7 2.7S1.5 9.5 1.5 8S2.7 5.3 4.2 5.3c.2 0 .5 0 .6.1V7c-.2 0-.4-.1-.6-.1C3.3 6.9 2.5 7.8 2.5 9c0 1.1.8 1.8 1.8 1.8s1.8-.9 1.8-2V1H7z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">Prestations</div>
+        <ul class="f-links">
+          <li><a href="#prestations">Maquillage mariage</a></li>
+          <li><a href="#prestations">Soirée & événement</a></li>
+          <li><a href="#prestations">Prestation VIP</a></li>
+          <li><a href="#prestations">Cours de maquillage</a></li>
+          <li><a href="#prestations">Shooting photo</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-title">Navigation</div>
+        <ul class="f-links">
+          <li><a href="#manifeste">À propos</a></li>
+          <li><a href="#galerie">Portfolio</a></li>
+          <li><a href="#avant-apres">Avant / après</a></li>
+          <li><a href="#temoignages">Témoignages</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-title">Contact</div>
+        <div class="f-contact-line"><strong>Email</strong>contact@elisemarceau.fr</div>
+        <div class="f-contact-line"><strong>Téléphone</strong>06 12 34 56 78</div>
+        <div class="f-contact-line"><strong>Zone</strong>Paris · Île-de-France · France entière</div>
+        <div class="f-contact-line"><strong>Disponibilité</strong>Lun – Sam · 8h – 20h</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="f-copy">© 2025 Élise Marceau Beauty Artist — Tous droits réservés</p>
+      <nav class="f-legal" aria-label="Liens légaux">
+        <a href="#">Mentions légales</a>
+        <a href="#">Confidentialité</a>
+        <a href="#">CGV</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING CTA -->
+<div id="ftcta">
+  <a href="#reservation" aria-label="Aller à la réservation">
+    <div class="ft-dot" aria-hidden="true"></div>
+    Réserver
+  </a>
+</div>
+
+<script>
+/* ── LOADER ── */
+window.addEventListener('load',()=>{
+  setTimeout(()=>document.getElementById('loader').classList.add('out'),1600);
+});
+
+/* ── NAV SCROLL ── */
+const mast=document.getElementById('mast');
+const ftcta=document.getElementById('ftcta');
+window.addEventListener('scroll',()=>{
+  mast.classList.toggle('s',window.scrollY>50);
+  ftcta.classList.toggle('on',window.scrollY>500);
+},{passive:true});
+
+/* ── HAMBURGER ── */
+const hbg=document.getElementById('hbg');
+const mob=document.getElementById('mob-menu');
+hbg.addEventListener('click',()=>{
+  const o=hbg.classList.toggle('o');
+  mob.classList.toggle('o');
+  hbg.setAttribute('aria-expanded',String(o));
+  document.body.style.overflow=o?'hidden':'';
+});
+mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  hbg.classList.remove('o');mob.classList.remove('o');
+  hbg.setAttribute('aria-expanded','false');document.body.style.overflow='';
+}));
+
+/* ── SMOOTH SCROLL ── */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(!t)return;e.preventDefault();
+    t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+
+/* ── REVEAL ── */
+const revObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');revObs.unobserve(e.target);}});
+},{threshold:.07,rootMargin:'0px 0px -36px 0px'});
+document.querySelectorAll('.r,.rl,.rr').forEach(el=>revObs.observe(el));
+
+/* ── COUNTERS ── */
+function countUp(el){
+  const target=+el.dataset.t,dur=1400,start=performance.now();
+  (function tick(now){
+    const p=Math.min((now-start)/dur,1),ease=1-Math.pow(1-p,3);
+    el.textContent=Math.round(ease*target);
+    if(p<1)requestAnimationFrame(tick);else el.textContent=target;
+  })(performance.now());
+}
+const cntObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){countUp(e.target);cntObs.unobserve(e.target);}});
+},{threshold:.5});
+document.querySelectorAll('.counter').forEach(el=>cntObs.observe(el));
+
+/* ── FAQ ── */
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.closest('.faq-i'),ans=item.querySelector('.faq-a');
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-i.open').forEach(i=>{
+      i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;
+      i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+    });
+    if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';btn.setAttribute('aria-expanded','true');}
+  });
+});
+
+/* ── CAROUSEL 3D ── */
+(function(){
+  const track=document.getElementById('carouselTrack');
+  if(!track)return;
+
+  const CARDS=6;
+  const STEP=360/CARDS;
+  let currentAngle=0;
+  let autoTimer=null;
+  let isPaused=false;
+
+  /* Animation CSS gère la rotation automatique. On pilote via un offset appliqué en plus */
+  let manualOffset=0; /* degrés supplémentaires appliqués instantanément */
+
+  function rotateTo(angle){
+    manualOffset=angle;
+    /* On injecte une animation custom one-shot pour aller à cet angle */
+    track.style.animationPlayState='paused';
+    track.style.transform=`rotateY(${-manualOffset}deg)`;
+    updateDots(Math.round(manualOffset/STEP)%CARDS);
+  }
+
+  /* Contrôles boutons */
+  document.getElementById('carouselPrev').addEventListener('click',()=>{
+    manualOffset-=STEP;
+    stopAuto();
+    rotateTo(manualOffset);
+    startAutoAfterDelay();
+  });
+  document.getElementById('carouselNext').addEventListener('click',()=>{
+    manualOffset+=STEP;
+    stopAuto();
+    rotateTo(manualOffset);
+    startAutoAfterDelay();
+  });
+
+  /* Dots */
+  document.querySelectorAll('.carousel-dot').forEach(dot=>{
+    dot.addEventListener('click',()=>{
+      const i=+dot.dataset.i;
+      manualOffset=i*STEP;
+      stopAuto();
+      rotateTo(manualOffset);
+      startAutoAfterDelay();
+    });
+  });
+
+  function updateDots(active){
+    const idx=((active%CARDS)+CARDS)%CARDS;
+    document.querySelectorAll('.carousel-dot').forEach((d,i)=>{
+      d.classList.toggle('act',i===idx);
+      d.setAttribute('aria-selected',String(i===idx));
+    });
+  }
+
+  /* Auto-rotate via CSS animation (smooth, GPU) */
+  /* When user interacts we switch to manual JS mode then re-enable CSS after delay */
+  function stopAuto(){
+    track.style.animation='none';
+    isPaused=true;
+    clearTimeout(autoTimer);
+  }
+  function startAutoAfterDelay(){
+    clearTimeout(autoTimer);
+    autoTimer=setTimeout(()=>{
+      /* Resume CSS animation from current position */
+      const current=-manualOffset;
+      track.style.animation='none';
+      /* Force reflow */
+      track.getBoundingClientRect();
+      track.style.transform=`rotateY(${current}deg)`;
+      track.style.animation=`carouselSpin 22s linear infinite`;
+      isPaused=false;
+    },3000);
+  }
+
+  /* Hover pause via CSS (handled by :hover in animation-play-state) is enough */
+  /* But we also track for dot sync */
+  let dotSyncRAF=null;
+  function syncDotsLoop(){
+    /* get current computed rotation from matrix for dot sync */
+    dotSyncRAF=requestAnimationFrame(syncDotsLoop);
+  }
+
+  /* Touch swipe on carousel */
+  let touchStartX=0;
+  track.addEventListener('touchstart',e=>{touchStartX=e.touches[0].clientX;},{passive:true});
+  track.addEventListener('touchend',e=>{
+    const dx=e.changedTouches[0].clientX-touchStartX;
+    if(Math.abs(dx)>30){
+      manualOffset+=dx>0?-STEP:STEP;
+      stopAuto();
+      rotateTo(manualOffset);
+      startAutoAfterDelay();
+    }
+  });
+})();
+
+/* ── AVANT/APRÈS SLIDERS ── */
+document.querySelectorAll('[data-slider]').forEach(wrap=>{
+  const after=wrap.querySelector('.ba-img-after');
+  const line=wrap.querySelector('.ba-slider-line');
+  const handle=wrap.querySelector('.ba-handle');
+  let dragging=false;
+
+  function setPos(pct){
+    pct=Math.max(2,Math.min(98,pct));
+    after.style.clipPath='inset(0 '+(100-pct)+'% 0 0)';
+    line.style.left=pct+'%';
+    handle.style.left=pct+'%';
+  }
+  setPos(50);
+
+  function getX(e){return e.touches?e.touches[0].clientX:e.clientX;}
+  function onMove(e){
+    if(!dragging)return;
+    e.preventDefault();
+    const r=wrap.getBoundingClientRect();
+    setPos(((getX(e)-r.left)/r.width)*100);
+  }
+
+  handle.addEventListener('mousedown',e=>{dragging=true;e.preventDefault();});
+  handle.addEventListener('touchstart',()=>{dragging=true;},{passive:true});
+  document.addEventListener('mousemove',onMove);
+  document.addEventListener('touchmove',onMove,{passive:false});
+  document.addEventListener('mouseup',()=>{dragging=false;});
+  document.addEventListener('touchend',()=>{dragging=false;});
+
+  wrap.addEventListener('click',e=>{
+    const r=wrap.getBoundingClientRect();
+    setPos(((e.clientX-r.left)/r.width)*100);
+  });
+});
+</script>
+</body>
+</html>
