@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Élise Marceau — Beauty Artist Paris · Maquillage Mariage & Événements</title>
-<meta name="description" content="Élise Marceau, Beauty Artist d'exception à Paris. Maquillage mariage, événements prestige, shootings photo. 12 ans d'expertise · 847 femmes sublimées · 247 avis 5★.">
-<meta property="og:title" content="Élise Marceau — Beauty Artist Paris">
-<meta property="og:description" content="L'art de révéler votre beauté. Maquillage haut de gamme, mariages et événements prestige, Paris & déplacements France entière.">
+<title>Élise Marceau — Beauty Artist</title>
+<meta name="description" content="Élise Marceau, Beauty Artist d'exception. Maquillage mariage, événements, shootings photo. Paris & déplacements.">
+<meta property="og:title" content="Élise Marceau — Beauty Artist">
+<meta property="og:description" content="L'art de révéler votre beauté. Maquillage haut de gamme, Paris.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Élise Marceau Beauty Artist","description":"Beauty Artist haut de gamme spécialisée mariage et événements, Paris","address":{"@type":"PostalAddress","addressLocality":"Paris","addressCountry":"FR"},"priceRange":"€€€","aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"247"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Élise Marceau Beauty Artist","description":"Beauty Artist haut de gamme","address":{"@type":"PostalAddress","addressLocality":"Paris","addressCountry":"FR"},"priceRange":"€€€","aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"247"}}</script>
 <style>
 :root{
   --ink:#1A1118;
@@ -55,6 +55,9 @@ button{font-family:inherit;border:none;background:none;cursor:pointer}
 @keyframes ldsep{to{height:36px}}
 @keyframes ldfade{to{opacity:1}}
 
+/* Mobile Vogue cover elements — hidden on desktop, shown by ≤768px media query */
+.mob-vogue-bar,.mob-cover-hed,.mob-sidebar,.mob-cover-foot{display:none}
+
 /* ── MASTHEAD ── */
 #mast{
   position:fixed;top:0;left:0;right:0;z-index:500;
@@ -72,9 +75,10 @@ button{font-family:inherit;border:none;background:none;cursor:pointer}
 #mast.s .mast-nav a{color:rgba(26,17,24,.45)}
 #mast.s .mast-btn{border-color:rgba(212,165,160,.5);color:var(--mink)}
 #mast.s .mast-btn:hover{background:var(--rose);color:var(--cream);border-color:var(--rose)}
+#mast.s .mast-issue{color:rgba(26,17,24,.28)}
 #mast.s .mast-hbg span{background:var(--ink)}
+.mast-issue{font-size:8px;letter-spacing:.32em;text-transform:uppercase;color:rgba(251,247,244,.35);font-weight:300}
 .mast-logo{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2.2vw,22px);font-weight:300;letter-spacing:.22em;text-transform:uppercase;color:var(--cream);text-align:center;white-space:nowrap;transition:color .4s}
-.mast-left{display:flex;align-items:center}
 .mast-right{display:flex;align-items:center;justify-content:flex-end;gap:28px}
 .mast-nav{display:flex;gap:24px;list-style:none}
 .mast-nav a{font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;color:rgba(251,247,244,.45);font-weight:300;transition:color .3s}
@@ -91,19 +95,25 @@ button{font-family:inherit;border:none;background:none;cursor:pointer}
 #mob-menu a{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,6vw,52px);font-weight:300;letter-spacing:.1em;color:var(--ink);transition:color .3s}
 #mob-menu a:hover{color:var(--rose)}
 
-/* ══ COVER ══ */
+/* ═══════════════════════════════════════
+   COVER — VOGUE SPLIT
+   Left: dark editorial / Right: full-bleed photo
+═══════════════════════════════════════ */
 .cover{
   width:100%;height:100svh;min-height:600px;
   display:grid;
   grid-template-columns:45% 55%;
   position:relative;
 }
+
+/* ── Left panel ── */
 .cover-left{
   background:var(--ink);
   display:flex;flex-direction:column;justify-content:space-between;
   padding:clamp(88px,10vw,136px) clamp(32px,4.5vw,72px) clamp(44px,5vw,72px);
   position:relative;z-index:2;overflow:hidden;
 }
+/* subtle bloom bottom-left */
 .cover-left::after{
   content:'';position:absolute;bottom:-120px;left:-80px;
   width:400px;height:400px;border-radius:50%;
@@ -136,6 +146,8 @@ button{font-family:inherit;border:none;background:none;cursor:pointer}
 .cov-stat-n{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.8vw,42px);font-weight:300;color:var(--cream);line-height:1;letter-spacing:-.01em}
 .cov-stat-n sup{font-size:.42em;color:var(--rose);vertical-align:super}
 .cov-stat-l{font-size:7.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(251,247,244,.25);font-weight:300}
+
+/* ── Right panel — photo ── */
 .cover-right{
   position:relative;
   overflow:hidden;
@@ -147,6 +159,7 @@ button{font-family:inherit;border:none;background:none;cursor:pointer}
   object-fit:cover;object-position:50% 18%;
   will-change:transform;
 }
+/* VOGUE watermark */
 .cover-vogue-bg{
   position:absolute;inset:0;z-index:1;pointer-events:none;
   display:flex;align-items:center;justify-content:center;overflow:hidden;
@@ -157,26 +170,31 @@ button{font-family:inherit;border:none;background:none;cursor:pointer}
   color:rgba(251,247,244,.055);white-space:nowrap;user-select:none;
   transform:rotate(-90deg);
 }
+/* gradient fade left edge */
 .cover-right::after{
   content:'';position:absolute;inset:0;z-index:2;
   background:linear-gradient(to right,rgba(26,17,24,.5) 0%,transparent 30%);
 }
+/* pink accent bar left edge */
 .cover-right::before{
   content:'';position:absolute;left:0;top:12%;bottom:12%;width:3px;z-index:4;
   background:linear-gradient(to bottom,transparent,var(--rose),var(--blush),transparent);
   opacity:.75;
 }
+/* caption */
 .cover-caption{
   position:absolute;bottom:28px;right:22px;z-index:5;
   font-size:7.5px;letter-spacing:.28em;text-transform:uppercase;color:rgba(251,247,244,.3);font-weight:300;
   writing-mode:vertical-rl;transform:rotate(180deg);
 }
+/* floating dot grid pattern */
 .cover-dots{
   position:absolute;top:24px;right:24px;z-index:3;
   width:64px;height:64px;
   background-image:radial-gradient(circle,rgba(251,247,244,.18) 1px,transparent 1px);
   background-size:8px 8px;pointer-events:none;
 }
+/* scroll indicator */
 .scroll-ind{
   position:absolute;left:clamp(18px,3vw,44px);bottom:clamp(28px,4vw,48px);z-index:3;
   display:flex;align-items:center;gap:10px;opacity:.4;
@@ -185,7 +203,9 @@ button{font-family:inherit;border:none;background:none;cursor:pointer}
 .scroll-ind-line{width:1px;height:42px;background:linear-gradient(to bottom,var(--rose),transparent);animation:sc 2s ease infinite}
 @keyframes sc{0%,100%{transform:scaleY(1);opacity:.4}50%{transform:scaleY(1.3);opacity:.75}}
 
-/* ══ MANIFESTE ══ */
+/* ═══════════════════════════════════════
+   MANIFESTE
+═══════════════════════════════════════ */
 .manifeste{
   background:var(--cream);color:var(--ink);
   display:flex;align-items:center;justify-content:center;
@@ -208,7 +228,9 @@ button{font-family:inherit;border:none;background:none;cursor:pointer}
 .manifeste-body strong{color:var(--ink);font-weight:500}
 .manifeste-sig{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,56px);font-style:italic;font-weight:300;color:rgba(26,17,24,.17);margin-top:22px;letter-spacing:-.02em}
 
-/* ══ DOUBLE PAGE ══ */
+/* ═══════════════════════════════════════
+   DOUBLE PAGE PORTRAIT
+═══════════════════════════════════════ */
 .dbl{display:grid;grid-template-columns:1fr 1fr;min-height:100svh}
 .dbl-photo{position:relative;overflow:hidden}
 .dbl-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 15%;will-change:transform;transition:transform 8s ease}
@@ -232,9 +254,11 @@ button{font-family:inherit;border:none;background:none;cursor:pointer}
 .dbl-stat-n sup{font-size:.4em;color:var(--rose);vertical-align:super;letter-spacing:0}
 .dbl-stat-l{font-size:8px;letter-spacing:.25em;text-transform:uppercase;color:var(--off-lt);margin-top:5px;font-weight:300}
 
-/* ══ PRESTATIONS ══ */
+/* ═══════════════════════════════════════
+   PRESTATIONS
+═══════════════════════════════════════ */
 .services-ed{background:var(--cream);color:var(--ink);padding:clamp(76px,9vw,132px) 0;position:relative;overflow:hidden}
-.services-ed::after{content:'BEAUTÉ';position:absolute;bottom:-3%;left:0;right:0;text-align:center;font-family:'Cormorant Garamond',serif;font-size:clamp(80px,20vw,280px);font-weight:300;letter-spacing:.1em;color:rgba(232,197,191,.11);line-height:1;pointer-events:none;user-select:none}
+.services-ed::after{content:'BEAUTY';position:absolute;bottom:-3%;left:0;right:0;text-align:center;font-family:'Cormorant Garamond',serif;font-size:clamp(80px,20vw,280px);font-weight:300;letter-spacing:.1em;color:rgba(232,197,191,.11);line-height:1;pointer-events:none;user-select:none}
 .services-ed-header{padding:0 clamp(20px,5vw,80px);margin-bottom:clamp(40px,5vw,68px);display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:32px;position:relative;z-index:1}
 .services-ed-big{font-family:'Cormorant Garamond',serif;font-size:clamp(58px,10.5vw,144px);font-weight:300;line-height:.88;letter-spacing:-.03em;color:var(--ink)}
 .services-ed-big em{font-style:italic;color:var(--rose);display:block}
@@ -254,165 +278,122 @@ button{font-family:inherit;border:none;background:none;cursor:pointer}
 .srow-desc{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--off-lt);font-weight:300;max-width:180px;display:none}
 .srow-price{font-family:'Cormorant Garamond',serif;font-size:clamp(12px,1.6vw,18px);font-weight:300;color:var(--off-lt);white-space:nowrap;letter-spacing:.03em}
 
-/* ══════════════════════════════════════════════
-   GALERIE — CAROUSEL INFINI ROTATIF 3D
-══════════════════════════════════════════════ */
+/* ═══════════════════════════════════════
+   GALERIE — CAROUSEL 3D
+═══════════════════════════════════════ */
 .gallery-film{
-  padding:clamp(76px,9vw,116px) 0 clamp(96px,10vw,140px);
+  padding:clamp(76px,9vw,116px) 0;
   background:var(--ink);
-  position:relative;
   overflow:hidden;
-}
-/* bloom de fond doux */
-.gallery-film::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse at 50% 60%,rgba(212,165,160,.06) 0%,transparent 65%);
-  pointer-events:none;
 }
 .gallery-film-header{
   padding:0 clamp(20px,5vw,80px);
-  margin-bottom:clamp(52px,6vw,88px);
-  display:flex;align-items:baseline;justify-content:space-between;
-  gap:clamp(12px,2.5vw,32px);
+  margin-bottom:clamp(36px,4vw,60px);
+  display:flex;align-items:baseline;justify-content:space-between;gap:20px;
+  flex-wrap:wrap;
 }
 .gallery-film-title{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,8vw,112px);font-weight:300;letter-spacing:-.02em;line-height:.9;color:var(--cream)}
 .gallery-film-title em{font-style:italic;color:var(--rose)}
 .gallery-film-sub{font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;color:rgba(251,247,244,.22);font-weight:300;align-self:flex-end;padding-bottom:9px;white-space:nowrap}
 
-/* ── Scène 3D ── */
-.carousel-scene{
-  perspective:1400px;
-  perspective-origin:50% 40%;
+/* ── Carousel 3D wrapper ── */
+.c3d-scene{
   width:100%;
-  display:flex;justify-content:center;
+  height:clamp(240px,38vw,460px);
   position:relative;
-  /* Contenir visuellement les cartes qui débordent en rotation */
+  perspective:clamp(500px,110vw,1400px);
+  perspective-origin:50% 50%;
   overflow:hidden;
-  padding:clamp(16px,2vw,24px) 0 clamp(24px,3vw,40px);
 }
-.carousel-track{
+.c3d-stage{
+  width:100%;height:100%;
   position:relative;
-  width:clamp(140px,14vw,200px);
-  height:clamp(180px,20vw,290px);
   transform-style:preserve-3d;
-  animation:carouselSpin 22s linear infinite;
-  will-change:transform;
+  transition:transform .7s cubic-bezier(.25,.46,.45,.94);
 }
-.carousel-track:hover{animation-play-state:paused}
-
-@keyframes carouselSpin{
-  from{transform:rotateY(0deg)}
-  to{transform:rotateY(-360deg)}
-}
-
-/* Chaque carte */
-.carousel-card{
-  position:absolute;inset:0;
-  border-radius:2px;
-  overflow:hidden;
-  backface-visibility:hidden;
-  -webkit-backface-visibility:hidden;
-  cursor:pointer;
-  transition:box-shadow .4s;
-}
-.carousel-card img{
-  width:100%;height:100%;object-fit:cover;
-  transition:transform .6s cubic-bezier(.16,1,.3,1),filter .6s;
-  filter:brightness(.82) saturate(.88);
-  display:block;
-}
-.carousel-card:hover img{
-  transform:scale(1.04);
-  filter:brightness(1) saturate(1.08);
-}
-
-/* Overlay dégradé et label */
-.carousel-card-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(26,17,24,.72) 0%,rgba(26,17,24,.1) 45%,transparent 70%);
-  transition:opacity .4s;
-  pointer-events:none;
-}
-.carousel-card:hover .carousel-card-overlay{opacity:.5}
-
-.carousel-card-info{
-  position:absolute;bottom:0;left:0;right:0;
-  padding:clamp(16px,2.5vw,28px);
-  z-index:2;
-  transform:translateY(6px);
-  transition:transform .5s cubic-bezier(.16,1,.3,1);
-}
-.carousel-card:hover .carousel-card-info{transform:translateY(0)}
-.carousel-card-label{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(14px,1.8vw,20px);font-weight:300;letter-spacing:.06em;
-  color:var(--cream);display:block;margin-bottom:4px;
-}
-.carousel-card-sub{
-  font-size:7.5px;letter-spacing:.28em;text-transform:uppercase;
-  color:rgba(251,247,244,.42);font-weight:300;
-}
-
-/* Positionnement des 6 cartes en cercle */
-.carousel-card:nth-child(1){transform:rotateY(  0deg) translateZ(clamp(160px,22vw,300px))}
-.carousel-card:nth-child(2){transform:rotateY( 60deg) translateZ(clamp(160px,22vw,300px))}
-.carousel-card:nth-child(3){transform:rotateY(120deg) translateZ(clamp(160px,22vw,300px))}
-.carousel-card:nth-child(4){transform:rotateY(180deg) translateZ(clamp(160px,22vw,300px))}
-.carousel-card:nth-child(5){transform:rotateY(240deg) translateZ(clamp(160px,22vw,300px))}
-.carousel-card:nth-child(6){transform:rotateY(300deg) translateZ(clamp(160px,22vw,300px))}
-
-/* Petales animées flottantes */
-@keyframes petalDrift{
-  0%{transform:translateY(0) translateX(0) rotate(0deg);opacity:0}
-  10%{opacity:.55}
-  80%{opacity:.4}
-  100%{transform:translateY(-120vh) translateX(clamp(30px,6vw,80px)) rotate(540deg);opacity:0}
-}
-.petal{
+/* Each card */
+.c3d-card{
   position:absolute;
-  pointer-events:none;
-  width:clamp(6px,1vw,12px);
-  aspect-ratio:1/1.4;
-  background:radial-gradient(ellipse at 40% 30%,rgba(232,197,191,.7),rgba(212,165,160,.3));
-  border-radius:50% 0 50% 0;
-  will-change:transform,opacity;
-}
-.petal:nth-child(1){left:8%;bottom:-5%;animation:petalDrift 9s ease-in 0s infinite}
-.petal:nth-child(2){left:18%;bottom:-8%;animation:petalDrift 11s ease-in 1.2s infinite}
-.petal:nth-child(3){left:32%;bottom:-3%;animation:petalDrift 8.5s ease-in 2.4s infinite}
-.petal:nth-child(4){left:52%;bottom:-6%;animation:petalDrift 10s ease-in .6s infinite}
-.petal:nth-child(5){left:68%;bottom:-4%;animation:petalDrift 9.5s ease-in 3.1s infinite}
-.petal:nth-child(6){left:80%;bottom:-7%;animation:petalDrift 12s ease-in 1.8s infinite}
-.petal:nth-child(7){left:92%;bottom:-5%;animation:petalDrift 7.5s ease-in 4.2s infinite}
-
-/* Contrôles ── pause/play + navigation */
-.carousel-controls{
-  display:flex;align-items:center;justify-content:center;gap:clamp(16px,2.5vw,32px);
-  margin-top:clamp(32px,4vw,56px);
-  position:relative;z-index:2;
-}
-.carousel-btn{
-  width:36px;height:36px;border:1px solid rgba(212,165,160,.28);border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  color:rgba(251,247,244,.4);font-size:10px;
-  transition:border-color .3s,color .3s,background .3s;
+  width:clamp(140px,18vw,260px);
+  aspect-ratio:3/4;
+  top:50%;
+  left:50%;
+  transform-style:preserve-3d;
+  overflow:hidden;
   cursor:pointer;
+  border-radius:0;
 }
-.carousel-btn:hover{border-color:var(--rose);color:var(--cream);background:rgba(212,165,160,.08)}
-.carousel-btn svg{width:10px;height:10px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.carousel-dots{display:flex;gap:8px;align-items:center}
-.carousel-dot{
-  width:5px;height:5px;border-radius:50%;background:rgba(251,247,244,.15);
-  transition:background .3s,transform .3s;cursor:pointer;
-  border:none;
+.c3d-card img{
+  width:100%;height:100%;
+  object-fit:cover;
+  display:block;
+  filter:brightness(.75) saturate(.85);
+  transition:filter .5s ease, transform .6s cubic-bezier(.16,1,.3,1);
 }
-.carousel-dot.act{background:var(--rose);transform:scale(1.4)}
-.carousel-hint{
-  text-align:center;margin-top:clamp(18px,2.5vw,28px);
-  font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:rgba(251,247,244,.16);font-weight:300;
+.c3d-card.active img{
+  filter:brightness(1) saturate(1.05);
+}
+.c3d-card:hover img{
+  transform:scale(1.04);
+}
+/* Label on each card */
+.c3d-card-lbl{
+  position:absolute;bottom:14px;left:14px;
+  font-size:8px;letter-spacing:.32em;text-transform:uppercase;
+  color:rgba(251,247,244,.5);font-weight:300;
+  opacity:0;transition:opacity .4s;
+}
+.c3d-card.active .c3d-card-lbl{opacity:1}
+/* Pink gradient bottom on active */
+.c3d-card::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(212,165,160,.22) 0%,transparent 50%);
+  opacity:0;transition:opacity .5s;pointer-events:none;
+}
+.c3d-card.active::after{opacity:1}
+
+/* ── Navigation controls ── */
+.c3d-controls{
+  display:flex;align-items:center;justify-content:center;
+  gap:clamp(20px,4vw,48px);
+  margin-top:clamp(20px,3vw,36px);
+  padding:0 clamp(20px,5vw,80px);
+}
+.c3d-btn{
+  width:44px;height:44px;border-radius:50%;
+  border:1px solid rgba(251,247,244,.18);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;background:none;
+  transition:border-color .3s,background .3s,transform .2s;
+  flex-shrink:0;
+}
+.c3d-btn:hover{border-color:var(--rose);background:var(--rose);transform:scale(1.08)}
+.c3d-btn svg{width:14px;height:14px;stroke:var(--cream);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+/* Dots */
+.c3d-dots{display:flex;gap:7px;align-items:center}
+.c3d-dot{
+  width:5px;height:5px;border-radius:50%;
+  background:rgba(251,247,244,.2);
+  transition:background .3s,transform .3s;
+  cursor:pointer;border:none;
+}
+.c3d-dot.active{background:var(--rose);transform:scale(1.4)}
+/* active caption below controls */
+.c3d-caption{
+  text-align:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(17px,2.2vw,24px);font-weight:300;font-style:italic;
+  color:rgba(251,247,244,.3);
+  margin-top:clamp(10px,1.5vw,18px);
+  letter-spacing:.03em;
+  min-height:1.5em;
+  transition:opacity .3s;
 }
 
-/* ══ AVANT / APRÈS ══ */
+/* ═══════════════════════════════════════
+   AVANT / APRÈS
+   3 small sliders in a row
+═══════════════════════════════════════ */
 .ba-spread{
   background:var(--nude);
   padding:clamp(76px,9vw,132px) clamp(20px,5vw,80px);
@@ -423,6 +404,7 @@ button{font-family:inherit;border:none;background:none;cursor:pointer}
 .ba-title{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,7.5vw,108px);font-weight:300;line-height:.88;letter-spacing:-.03em;color:var(--ink)}
 .ba-title em{font-style:italic;color:var(--rose)}
 .ba-hint{font-family:'EB Garamond',serif;font-size:clamp(13px,1.4vw,15.5px);font-style:italic;color:var(--off);max-width:220px;line-height:1.72;padding-bottom:8px}
+/* 3 columns */
 .ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2vw,22px);position:relative;z-index:1}
 .ba-card{display:flex;flex-direction:column;gap:11px}
 .ba-slider-wrap{
@@ -450,7 +432,9 @@ button{font-family:inherit;border:none;background:none;cursor:pointer}
 .ba-label{font-family:'Cormorant Garamond',serif;font-size:clamp(14px,1.6vw,19px);font-weight:400;color:var(--ink)}
 .ba-sub{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--off-lt);font-weight:300}
 
-/* ══ TÉMOIGNAGES ══ */
+/* ═══════════════════════════════════════
+   TÉMOIGNAGES
+═══════════════════════════════════════ */
 .quotes-spread{background:var(--ink);padding:clamp(76px,9vw,132px) 0;position:relative;overflow:hidden}
 .quotes-spread::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(212,165,160,.05) 0%,transparent 60%);pointer-events:none}
 .quotes-header{padding:0 clamp(20px,5vw,80px);margin-bottom:clamp(52px,6.5vw,84px);display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:14px}
@@ -471,7 +455,9 @@ button{font-family:inherit;border:none;background:none;cursor:pointer}
 .quote-name{font-size:11px;font-weight:400;color:var(--cream);letter-spacing:.04em}
 .quote-ctx{font-size:8px;color:rgba(251,247,244,.25);letter-spacing:.1em;text-transform:uppercase;margin-top:2px;font-weight:300}
 
-/* ══ PROCESSUS ══ */
+/* ═══════════════════════════════════════
+   PROCESSUS
+═══════════════════════════════════════ */
 .process-spread{background:var(--powder);color:var(--ink);padding:clamp(76px,9vw,132px) clamp(20px,5vw,80px);position:relative;overflow:hidden}
 .process-spread::after{content:'05';position:absolute;right:-2%;bottom:-6%;font-family:'Cormorant Garamond',serif;font-size:clamp(120px,24vw,340px);font-weight:300;color:rgba(26,17,24,.05);line-height:1;pointer-events:none;user-select:none}
 .process-label{font-size:8.5px;letter-spacing:.38em;text-transform:uppercase;color:var(--rose);display:flex;align-items:center;gap:13px;margin-bottom:16px;font-weight:400}
@@ -488,7 +474,9 @@ button{font-family:inherit;border:none;background:none;cursor:pointer}
 .ps-title{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,1.8vw,23px);font-weight:400;color:var(--ink);margin-bottom:7px;letter-spacing:.02em}
 .ps-text{font-size:11px;font-weight:300;color:var(--off);line-height:1.72;letter-spacing:.01em}
 
-/* ══ FAQ ══ */
+/* ═══════════════════════════════════════
+   FAQ
+═══════════════════════════════════════ */
 .faq-spread{background:var(--ink);padding:clamp(76px,9vw,132px) clamp(20px,5vw,80px)}
 .faq-layout{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(40px,5.5vw,92px);align-items:start}
 .faq-left-rubric{font-size:8.5px;letter-spacing:.38em;text-transform:uppercase;color:var(--rose);display:flex;align-items:center;gap:13px;margin-bottom:16px;font-weight:400}
@@ -507,7 +495,9 @@ button{font-family:inherit;border:none;background:none;cursor:pointer}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.16,1,.3,1)}
 .faq-a-inner{padding:0 0 clamp(15px,2vw,24px);font-size:clamp(12.5px,1.35vw,15px);font-weight:300;color:rgba(251,247,244,.4);line-height:1.87;letter-spacing:.01em}
 
-/* ══ RÉSERVATION ══ */
+/* ═══════════════════════════════════════
+   RÉSERVATION
+═══════════════════════════════════════ */
 .cta-spread{min-height:100svh;background:var(--ink);position:relative;overflow:hidden;display:flex;align-items:center;padding:clamp(96px,11vw,152px) clamp(20px,5vw,80px)}
 .cta-bg-photo{position:absolute;right:0;top:0;bottom:0;width:44%;opacity:.18}
 .cta-bg-photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(25%) saturate(.88)}
@@ -535,7 +525,9 @@ button{font-family:inherit;border:none;background:none;cursor:pointer}
 .cta-proof-text strong{display:block;font-size:11px;font-weight:400;color:var(--cream)}
 .cta-proof-text span{font-size:9px;color:rgba(251,247,244,.26);letter-spacing:.1em;font-weight:300}
 
-/* ══ FOOTER ══ */
+/* ═══════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════ */
 footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:clamp(24px,3.5vw,56px);padding-bottom:40px;border-bottom:1px solid rgba(251,247,244,.05);margin-bottom:24px}
 .f-logo{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.5vw,28px);font-weight:300;letter-spacing:.1em;color:var(--cream);margin-bottom:12px}
@@ -555,7 +547,9 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
 .f-legal a{font-size:8px;color:rgba(251,247,244,.12);letter-spacing:.08em;transition:color .3s}
 .f-legal a:hover{color:rgba(251,247,244,.36)}
 
-/* ══ FLOATING CTA ══ */
+/* ═══════════════════════════════════════
+   FLOATING CTA
+═══════════════════════════════════════ */
 #ftcta{position:fixed;bottom:22px;right:22px;z-index:400;opacity:0;transform:translateY(12px);transition:opacity .4s,transform .4s;pointer-events:none}
 #ftcta.on{opacity:1;transform:translateY(0);pointer-events:all}
 #ftcta a{display:flex;align-items:center;gap:8px;padding:11px 18px;background:var(--rose);color:var(--cream);font-size:8.5px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;box-shadow:0 7px 32px rgba(212,165,160,.32);transition:background .3s,transform .3s}
@@ -563,7 +557,9 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
 .ft-dot{width:5px;height:5px;background:var(--cream);border-radius:50%;animation:pdot 1.9s ease infinite}
 @keyframes pdot{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.7);opacity:.3}}
 
-/* ══ REVEAL ══ */
+/* ═══════════════════════════════════════
+   REVEAL ANIMATIONS
+═══════════════════════════════════════ */
 .r{opacity:0;transform:translateY(26px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
 .r.on{opacity:1;transform:none}
 .rl{opacity:0;transform:translateX(-26px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
@@ -574,12 +570,12 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
 .d3{transition-delay:.3s!important}.d4{transition-delay:.4s!important}
 .d5{transition-delay:.5s!important}.d6{transition-delay:.6s!important}
 
-/* ══ RESPONSIVE ══ */
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
 @media(max-width:1024px){
-  /* Cover : reste en 2 colonnes sur tablette */
-  .cover{grid-template-columns:1fr 1fr;grid-template-rows:1fr;height:100svh}
-  .cover-right{display:block!important;position:relative;overflow:hidden}
-  .cover-right img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  /* Tablet still shows desktop split cover — just tighter ratio */
+  .cover{grid-template-columns:48% 52%}
   .dbl{grid-template-columns:1fr}
   .dbl-photo{min-height:60vw;aspect-ratio:auto}
   .services-ed-header{grid-template-columns:1fr}
@@ -589,77 +585,103 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
   .process-steps::before{display:none}
   .faq-layout{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr 1fr}
-  .carousel-card:nth-child(1){transform:rotateY(  0deg) translateZ(clamp(140px,20vw,260px))}
-  .carousel-card:nth-child(2){transform:rotateY( 60deg) translateZ(clamp(140px,20vw,260px))}
-  .carousel-card:nth-child(3){transform:rotateY(120deg) translateZ(clamp(140px,20vw,260px))}
-  .carousel-card:nth-child(4){transform:rotateY(180deg) translateZ(clamp(140px,20vw,260px))}
-  .carousel-card:nth-child(5){transform:rotateY(240deg) translateZ(clamp(140px,20vw,260px))}
-  .carousel-card:nth-child(6){transform:rotateY(300deg) translateZ(clamp(140px,20vw,260px))}
 }
-
-/* ── Cover mobile : colonne unique avec photo encadrée intégrée ── */
-@media(max-width:768px){
-  /* On bascule en colonne unique, cover-right masqué (photo intégrée dans cover-left) */
+@media(max-width:900px){
+  /* ── VOGUE MOBILE/TABLET COVER ──
+     Full-bleed photo like a magazine cover
+  */
   .cover{
-    grid-template-columns:1fr;
-    grid-template-rows:1fr;
-    height:auto;
-    min-height:100svh;
-  }
-  .cover-right{display:none!important}
-  /* Rendre le cadre photo visible */
-  .cover-frame{display:block!important}
-
-  .cover-left{
-    padding:clamp(88px,14vw,116px) clamp(20px,6vw,40px) clamp(44px,8vw,60px);
-    justify-content:flex-start;
-  }
-  .cover-hed-wrap{
-    display:grid;
-    grid-template-columns:1fr auto;
-    gap:clamp(16px,4vw,28px);
-    align-items:start;
-    padding:clamp(22px,4vw,36px) 0 clamp(18px,3vw,28px);
-    flex:none;
-  }
-  /* Colonne texte */
-  .cover-hed-text{display:flex;flex-direction:column}
-  /* Cadre photo encadrée */
-  .cover-frame{
-    display:block!important;
-    width:clamp(110px,36vw,180px);
-    flex-shrink:0;
-    position:relative;
-    margin-top:clamp(8px,2vw,14px);
-  }
-  .cover-frame-img{
-    width:100%;
-    aspect-ratio:3/4;
-    object-fit:cover;
-    object-position:50% 15%;
     display:block;
-    /* Cadre chic */
-    outline:1px solid rgba(212,165,160,.35);
-    outline-offset:6px;
-    box-shadow:0 18px 48px rgba(0,0,0,.45);
+    height:100svh;min-height:580px;
+    position:relative;
+    overflow:hidden;
   }
-  /* Badge flottant sur la photo */
-  .cover-frame-badge{
+  .cover-left{display:none}
+  .cover-right{
+    display:block!important;
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;height:100%!important;
+  }
+  .cover-right img{
+    position:absolute!important;inset:0!important;
+    width:100%!important;height:100%!important;
+    object-fit:cover!important;object-position:50% 15%!important;
+  }
+  .cover-right::after{
+    content:'';position:absolute;inset:0;z-index:2;
+    background:linear-gradient(to bottom,rgba(26,17,24,.55) 0%,rgba(26,17,24,.08) 38%,rgba(26,17,24,.05) 55%,rgba(26,17,24,.6) 100%);
+  }
+  .cover-vogue-bg{display:none}
+  .cover-dots{display:none}
+  .cover-caption{display:none}
+  .cover-right::before{display:none}
+
+  /* Show mobile Vogue elements */
+  .mob-vogue-bar{display:flex}
+  .mob-cover-hed{display:block}
+  .mob-sidebar{display:flex}
+  .mob-cover-foot{display:flex}
+
+  /* ── Vogue masthead line ── */
+  .mob-vogue-bar{
+    position:absolute;top:0;left:0;right:0;z-index:10;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:clamp(16px,3vw,28px) clamp(18px,4vw,36px) 0;
+  }
+  .mob-vogue-issue{font-size:clamp(7px,1.2vw,9px);letter-spacing:.38em;text-transform:uppercase;color:rgba(251,247,244,.5);font-weight:300}
+  .mob-vogue-num{font-size:clamp(7px,1.2vw,9px);letter-spacing:.28em;text-transform:uppercase;color:rgba(251,247,244,.4);font-weight:300}
+
+  /* ── MEGA HEADLINE ── */
+  .mob-cover-hed{
     position:absolute;
-    bottom:-10px;left:-10px;
-    background:var(--rose);
-    color:var(--cream);
-    font-size:7px;letter-spacing:.24em;text-transform:uppercase;font-weight:400;
-    padding:6px 10px;
-    white-space:nowrap;
+    bottom:clamp(90px,18vw,180px);
+    left:0;right:0;z-index:10;
+    padding:0 clamp(18px,4vw,40px);
   }
-  .cover-hed{font-size:clamp(44px,12vw,72px);margin-bottom:clamp(10px,2.5vw,18px)}
-  .cover-deck{font-size:clamp(13px,3.5vw,16px);max-width:none}
-  .cover-ctas{margin-top:auto}
+  .mob-cover-hed-text{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(68px,18vw,160px);
+    font-weight:300;line-height:.82;letter-spacing:-.02em;
+    color:var(--cream);text-transform:uppercase;
+  }
+  .mob-cover-hed-text em{
+    display:block;font-style:italic;color:var(--rose);
+    font-size:.72em;line-height:.9;
+  }
 
-  /* Stats sous le grid */
-  .cover-stats{margin-top:clamp(24px,5vw,36px);flex:none}
+  /* ── Right sidebar rubrics ── */
+  .mob-sidebar{
+    position:absolute;right:clamp(14px,3vw,28px);top:50%;transform:translateY(-50%);z-index:10;
+    display:flex;flex-direction:column;align-items:flex-end;gap:clamp(4px,1vw,8px);
+  }
+  .mob-sidebar-item{
+    font-size:clamp(7.5px,1.4vw,10px);letter-spacing:.26em;text-transform:uppercase;
+    color:rgba(251,247,244,.5);font-weight:300;text-align:right;line-height:1.4;
+  }
+  .mob-sidebar-item.bold{color:rgba(251,247,244,.85);font-weight:500;font-size:clamp(8.5px,1.6vw,11px)}
 
+  /* ── Bottom CTA strip ── */
+  .mob-cover-foot{
+    position:absolute;bottom:0;left:0;right:0;z-index:10;
+    padding:0 clamp(18px,4vw,40px) clamp(24px,5vw,48px);
+    display:flex;align-items:center;justify-content:space-between;gap:14px;
+  }
+  .mob-cover-cta{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:clamp(10px,1.8vw,14px) clamp(20px,3.5vw,32px);
+    background:var(--rose);color:var(--cream);
+    font-size:clamp(8px,1.4vw,10px);font-weight:400;letter-spacing:.26em;text-transform:uppercase;
+  }
+  .mob-cover-stats{display:flex;gap:clamp(14px,3vw,28px)}
+  .mob-cov-stat{display:flex;flex-direction:column;gap:2px;align-items:center}
+  .mob-cov-stat-n{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,4vw,32px);font-weight:300;color:var(--cream);line-height:1}
+  .mob-cov-stat-n sup{font-size:.42em;color:var(--rose);vertical-align:super}
+  .mob-cov-stat-l{font-size:clamp(6px,1vw,8px);letter-spacing:.18em;text-transform:uppercase;color:rgba(251,247,244,.28)}
+
+  .scroll-ind{left:auto;right:clamp(14px,3vw,28px);bottom:clamp(24px,5vw,48px);opacity:.35}
+}
+@media(max-width:768px){
   .manifeste-inner{grid-template-columns:1fr}
   .manifeste-num{display:none}
   .manifeste-body{column-count:1}
@@ -673,28 +695,15 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
   .srow-desc{display:none}
   .service-row{grid-template-columns:42px 1fr auto}
   .cta-bg-photo{width:100%;opacity:.06}
-  .carousel-track{
-    width:clamp(120px,36vw,200px);
-    height:clamp(160px,48vw,270px);
-  }
-  .carousel-card:nth-child(1){transform:rotateY(  0deg) translateZ(clamp(110px,34vw,190px))}
-  .carousel-card:nth-child(2){transform:rotateY( 60deg) translateZ(clamp(110px,34vw,190px))}
-  .carousel-card:nth-child(3){transform:rotateY(120deg) translateZ(clamp(110px,34vw,190px))}
-  .carousel-card:nth-child(4){transform:rotateY(180deg) translateZ(clamp(110px,34vw,190px))}
-  .carousel-card:nth-child(5){transform:rotateY(240deg) translateZ(clamp(110px,34vw,190px))}
-  .carousel-card:nth-child(6){transform:rotateY(300deg) translateZ(clamp(110px,34vw,190px))}
 }
 @media(max-width:520px){
   .ba-grid{grid-template-columns:1fr}
   .process-steps{grid-template-columns:1fr}
   #mast{grid-template-columns:1fr auto auto}
   .cover-stats{gap:16px}
-  .cover-hed-wrap{grid-template-columns:1fr auto}
-  .cover-frame{width:clamp(90px,30vw,130px)}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
-  .carousel-track{animation:none!important}
 }
 </style>
 </head>
@@ -718,7 +727,7 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
 
 <!-- MASTHEAD -->
 <nav id="mast" role="navigation" aria-label="Navigation principale">
-  <div class="mast-left"></div>
+  <span class="mast-issue">Paris · Mariages · Événements</span>
   <a href="#" class="mast-logo">Élise Marceau</a>
   <div class="mast-right">
     <ul class="mast-nav">
@@ -736,26 +745,18 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
 
 <main>
 
-<!-- ══ COVER ══ -->
+<!-- ══ COVER ══════════════════════════════════════ -->
 <section class="cover" aria-label="Page d'accueil">
+
+  <!-- Left: dark editorial column -->
   <div class="cover-left">
     <div class="cover-eyebrow r">Beauty Artist · Paris</div>
     <div class="cover-hed-wrap">
-      <!-- Texte principal -->
-      <div class="cover-hed-text">
-        <h1 class="cover-hed r d1">L'art<br>de<br><em>révéler.</em></h1>
-        <p class="cover-deck r d2">Une expérience beauté d'exception, pensée pour sublimer chaque visage unique.</p>
-        <div class="cover-ctas r d3">
-          <a href="#reservation" class="cover-btn-main"><span>Prendre rendez-vous</span></a>
-          <a href="#galerie" class="cover-btn-sec">Découvrir le portfolio</a>
-        </div>
-      </div>
-      <!-- Photo encadrée — visible uniquement mobile (masquée sur desktop via CSS car cover-right prend le relai) -->
-      <div class="cover-frame" style="display:none" aria-hidden="true">
-        <img class="cover-frame-img"
-          src="https://images.unsplash.com/photo-1487412947147-5cebf96b8735?w=600&q=85&auto=format&fit=crop"
-          alt="">
-        <span class="cover-frame-badge">Beauty Artist</span>
+      <h1 class="cover-hed r d1">L'art<br>de<br><em>révéler.</em></h1>
+      <p class="cover-deck r d2">Une expérience beauté d'exception, pensée pour chaque visage unique.</p>
+      <div class="cover-ctas r d3">
+        <a href="#reservation" class="cover-btn-main"><span>Prendre rendez-vous</span></a>
+        <a href="#galerie" class="cover-btn-sec">Voir le portfolio</a>
       </div>
     </div>
     <div class="cover-stats r d4">
@@ -774,6 +775,7 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
     </div>
   </div>
 
+  <!-- Right: full editorial photo — always visible -->
   <div class="cover-right">
     <img
       src="https://images.unsplash.com/photo-1487412947147-5cebf96b8735?w=1200&q=90&auto=format&fit=crop"
@@ -785,13 +787,54 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
     <div class="cover-caption" aria-hidden="true">Paris · Île-de-France</div>
   </div>
 
+  <!-- ── MOBILE VOGUE COVER ELEMENTS (hidden on desktop via CSS) ── -->
+  <!-- Top bar: issue ref -->
+  <div class="mob-vogue-bar" aria-hidden="true">
+    <span class="mob-vogue-issue">Paris · Beauté · Luxe</span>
+    <span class="mob-vogue-num">N° 847</span>
+  </div>
+
+  <!-- Mega headline stamped over photo -->
+  <div class="mob-cover-hed r" role="presentation">
+    <div class="mob-cover-hed-text">
+      L'art<br>de<br><em>révéler.</em>
+    </div>
+  </div>
+
+  <!-- Vogue-style right sidebar rubrics -->
+  <div class="mob-sidebar" aria-hidden="true">
+    <div class="mob-sidebar-item bold">Mariages</div>
+    <div class="mob-sidebar-item">Maquillage haut de gamme</div>
+    <div class="mob-sidebar-item bold">Shootings</div>
+    <div class="mob-sidebar-item">Éditorial beauté</div>
+    <div class="mob-sidebar-item bold">VIP</div>
+    <div class="mob-sidebar-item">Prestations privées</div>
+    <div class="mob-sidebar-item bold">Cours</div>
+    <div class="mob-sidebar-item">Mise en beauté</div>
+  </div>
+
+  <!-- Bottom: CTA + stats -->
+  <div class="mob-cover-foot r d4">
+    <a href="#reservation" class="mob-cover-cta" aria-label="Prendre rendez-vous">Réserver</a>
+    <div class="mob-cover-stats" aria-hidden="true">
+      <div class="mob-cov-stat">
+        <div class="mob-cov-stat-n"><span class="counter" data-t="847">0</span><sup>+</sup></div>
+        <div class="mob-cov-stat-l">Sublimées</div>
+      </div>
+      <div class="mob-cov-stat">
+        <div class="mob-cov-stat-n">★<span class="counter" data-t="247">0</span></div>
+        <div class="mob-cov-stat-l">Avis</div>
+      </div>
+    </div>
+  </div>
+
   <div class="scroll-ind" aria-hidden="true">
     <span class="scroll-ind-text">Scroll</span>
     <div class="scroll-ind-line"></div>
   </div>
 </section>
 
-<!-- ══ MANIFESTE ══ -->
+<!-- ══ MANIFESTE ════════════════════════════════ -->
 <section class="manifeste" id="manifeste" aria-labelledby="manifeste-title">
   <div class="manifeste-inner">
     <div class="manifeste-num r" aria-hidden="true">01</div>
@@ -808,7 +851,7 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
   </div>
 </section>
 
-<!-- ══ DOUBLE PAGE ══ -->
+<!-- ══ DOUBLE PAGE ═══════════════════════════════ -->
 <section class="dbl" aria-label="Portrait éditorial expertise">
   <div class="dbl-photo rl">
     <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&q=88&auto=format&fit=crop" alt="Maquillage mariage élégant — Élise Marceau" loading="lazy">
@@ -835,7 +878,7 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
   </div>
 </section>
 
-<!-- ══ PRESTATIONS ══ -->
+<!-- ══ PRESTATIONS ════════════════════════════════ -->
 <section class="services-ed" id="prestations" aria-labelledby="serv-title">
   <div class="services-ed-header">
     <div>
@@ -843,7 +886,7 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
       <h2 class="services-ed-big r d1" id="serv-title">Mes<br><em>offres</em></h2>
     </div>
     <div class="services-ed-intro r d2">
-      <p>Du mariage au shooting éditorial, chaque prestation est une expérience unique et entièrement personnalisée.</p>
+      <p>Du mariage au shooting éditorial, chaque prestation est une expérience unique et personnalisée.</p>
       <p>Survolez pour explorer.</p>
     </div>
   </div>
@@ -857,104 +900,57 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
   </div>
 </section>
 
-<!-- ══ GALERIE — CAROUSEL 3D ══ -->
+<!-- ══ GALERIE 3D ════════════════════════════════ -->
 <section class="gallery-film" id="galerie" aria-labelledby="gallery-title">
-
-  <!-- pétales flottantes -->
-  <div class="petal" aria-hidden="true"></div>
-  <div class="petal" aria-hidden="true"></div>
-  <div class="petal" aria-hidden="true"></div>
-  <div class="petal" aria-hidden="true"></div>
-  <div class="petal" aria-hidden="true"></div>
-  <div class="petal" aria-hidden="true"></div>
-  <div class="petal" aria-hidden="true"></div>
-
   <div class="gallery-film-header">
     <h2 class="gallery-film-title r" id="gallery-title"><em>Port</em>folio</h2>
-    <span class="gallery-film-sub r d1">Survolez pour marquer une pause</span>
+    <span class="gallery-film-sub r d1">Faites tourner le carousel</span>
   </div>
 
-  <div class="carousel-scene" role="region" aria-label="Carousel portfolio">
-    <div class="carousel-track" id="carouselTrack" aria-live="polite">
-
-      <article class="carousel-card">
-        <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=700&q=82&auto=format&fit=crop" alt="Look mariage bridal glamour" loading="lazy">
-        <div class="carousel-card-overlay" aria-hidden="true"></div>
-        <div class="carousel-card-info">
-          <span class="carousel-card-label">Mariage</span>
-          <span class="carousel-card-sub">Bridal · Longue tenue</span>
-        </div>
-      </article>
-
-      <article class="carousel-card">
-        <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=550&q=82&auto=format&fit=crop" alt="Maquillage éditorial beauté" loading="lazy">
-        <div class="carousel-card-overlay" aria-hidden="true"></div>
-        <div class="carousel-card-info">
-          <span class="carousel-card-label">Éditorial</span>
-          <span class="carousel-card-sub">Editorial · Presse</span>
-        </div>
-      </article>
-
-      <article class="carousel-card">
-        <img src="https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?w=800&q=82&auto=format&fit=crop" alt="Shooting photo prestation beauté" loading="lazy">
-        <div class="carousel-card-overlay" aria-hidden="true"></div>
-        <div class="carousel-card-info">
-          <span class="carousel-card-label">Shooting</span>
-          <span class="carousel-card-sub">Artistique · Mode</span>
-        </div>
-      </article>
-
-      <article class="carousel-card">
-        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=550&q=82&auto=format&fit=crop" alt="Maquillage soirée événement" loading="lazy">
-        <div class="carousel-card-overlay" aria-hidden="true"></div>
-        <div class="carousel-card-info">
-          <span class="carousel-card-label">Soirée</span>
-          <span class="carousel-card-sub">Gala · Prestige</span>
-        </div>
-      </article>
-
-      <article class="carousel-card">
-        <img src="https://images.unsplash.com/photo-1503236823255-94609f598e71?w=650&q=82&auto=format&fit=crop" alt="Portrait beauté naturelle sublimée" loading="lazy">
-        <div class="carousel-card-overlay" aria-hidden="true"></div>
-        <div class="carousel-card-info">
-          <span class="carousel-card-label">Portrait</span>
-          <span class="carousel-card-sub">Naturel · Lumineux</span>
-        </div>
-      </article>
-
-      <article class="carousel-card">
-        <img src="https://images.unsplash.com/photo-1515688594390-b649af70d282?w=550&q=82&auto=format&fit=crop" alt="Maquillage naturel élégant" loading="lazy">
-        <div class="carousel-card-overlay" aria-hidden="true"></div>
-        <div class="carousel-card-info">
-          <span class="carousel-card-label">Naturel</span>
-          <span class="carousel-card-sub">No-makeup · Éclat</span>
-        </div>
-      </article>
-
+  <!-- 3D Scene -->
+  <div class="c3d-scene" id="c3dScene" aria-label="Carousel portfolio 3D">
+    <div class="c3d-stage" id="c3dStage">
+      <div class="c3d-card" data-idx="0">
+        <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=700&q=82&auto=format&fit=crop" alt="Mariage bridal glamour" loading="lazy">
+        <span class="c3d-card-lbl">Mariage</span>
+      </div>
+      <div class="c3d-card" data-idx="1">
+        <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=700&q=82&auto=format&fit=crop" alt="Maquillage éditorial" loading="lazy">
+        <span class="c3d-card-lbl">Éditorial</span>
+      </div>
+      <div class="c3d-card" data-idx="2">
+        <img src="https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?w=700&q=82&auto=format&fit=crop" alt="Shooting photo beauté" loading="lazy">
+        <span class="c3d-card-lbl">Shooting</span>
+      </div>
+      <div class="c3d-card" data-idx="3">
+        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=700&q=82&auto=format&fit=crop" alt="Maquillage soirée" loading="lazy">
+        <span class="c3d-card-lbl">Soirée</span>
+      </div>
+      <div class="c3d-card" data-idx="4">
+        <img src="https://images.unsplash.com/photo-1503236823255-94609f598e71?w=700&q=82&auto=format&fit=crop" alt="Portrait beauté naturelle" loading="lazy">
+        <span class="c3d-card-lbl">Portrait</span>
+      </div>
+      <div class="c3d-card" data-idx="5">
+        <img src="https://images.unsplash.com/photo-1515688594390-b649af70d282?w=700&q=82&auto=format&fit=crop" alt="Maquillage naturel élégant" loading="lazy">
+        <span class="c3d-card-lbl">Naturel</span>
+      </div>
     </div>
   </div>
 
-  <div class="carousel-controls" role="group" aria-label="Contrôles carousel">
-    <button class="carousel-btn" id="carouselPrev" aria-label="Précédent">
-      <svg viewBox="0 0 10 10"><path d="M6 2L3 5l3 3"/></svg>
+  <!-- Controls -->
+  <div class="c3d-controls">
+    <button class="c3d-btn" id="c3dPrev" aria-label="Photo précédente">
+      <svg viewBox="0 0 14 14"><path d="M9 2L4 7l5 5"/></svg>
     </button>
-    <div class="carousel-dots" role="tablist" aria-label="Navigation portfolio">
-      <button class="carousel-dot act" role="tab" aria-selected="true" aria-label="Photo 1" data-i="0"></button>
-      <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Photo 2" data-i="1"></button>
-      <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Photo 3" data-i="2"></button>
-      <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Photo 4" data-i="3"></button>
-      <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Photo 5" data-i="4"></button>
-      <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Photo 6" data-i="5"></button>
-    </div>
-    <button class="carousel-btn" id="carouselNext" aria-label="Suivant">
-      <svg viewBox="0 0 10 10"><path d="M4 2l3 3-3 3"/></svg>
+    <div class="c3d-dots" id="c3dDots" role="tablist" aria-label="Navigation carousel"></div>
+    <button class="c3d-btn" id="c3dNext" aria-label="Photo suivante">
+      <svg viewBox="0 0 14 14"><path d="M5 2l5 5-5 5"/></svg>
     </button>
   </div>
-  <p class="carousel-hint" aria-hidden="true">Survolez le carousel · Utilisez les flèches pour naviguer</p>
-
+  <div class="c3d-caption" id="c3dCaption" aria-live="polite"></div>
 </section>
 
-<!-- ══ AVANT / APRÈS ══ -->
+<!-- ══ AVANT / APRÈS ════════════════════════════ -->
 <section class="ba-spread" id="avant-apres" aria-labelledby="ba-title">
   <div class="ba-header">
     <h2 class="ba-title r" id="ba-title">Avant<br><em>après.</em></h2>
@@ -962,6 +958,7 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
   </div>
   <div class="ba-grid">
 
+    <!-- Slider 1 -->
     <div class="ba-card r">
       <div class="ba-slider-wrap" data-slider>
         <img class="ba-img" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=82&auto=format&fit=crop" alt="Avant — maquillage mariage" loading="lazy">
@@ -973,6 +970,7 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
       <div><div class="ba-label">Maquillage Mariage</div><div class="ba-sub">Look naturel & longue tenue</div></div>
     </div>
 
+    <!-- Slider 2 -->
     <div class="ba-card r d1">
       <div class="ba-slider-wrap" data-slider>
         <img class="ba-img" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=82&auto=format&fit=crop" alt="Avant — maquillage soirée" loading="lazy">
@@ -984,6 +982,7 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
       <div><div class="ba-label">Soirée Gala</div><div class="ba-sub">Look dramatique & sophistiqué</div></div>
     </div>
 
+    <!-- Slider 3 -->
     <div class="ba-card r d2">
       <div class="ba-slider-wrap" data-slider>
         <img class="ba-img" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=82&auto=format&fit=crop" alt="Avant — mise en beauté" loading="lazy">
@@ -998,7 +997,7 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
   </div>
 </section>
 
-<!-- ══ TÉMOIGNAGES ══ -->
+<!-- ══ TÉMOIGNAGES ══════════════════════════════ -->
 <section class="quotes-spread" id="temoignages" aria-labelledby="quotes-title">
   <div class="quotes-header">
     <h2 class="quotes-title r" id="quotes-title">Elles <em>témoignent.</em></h2>
@@ -1035,7 +1034,7 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
   </div>
 </section>
 
-<!-- ══ PROCESSUS ══ -->
+<!-- ══ PROCESSUS ════════════════════════════════ -->
 <section class="process-spread" id="processus" aria-labelledby="process-title">
   <div class="process-label r">Le processus</div>
   <h2 class="process-hed r d1" id="process-title">Une expérience<br><em>fluide</em></h2>
@@ -1048,7 +1047,7 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
   </div>
 </section>
 
-<!-- ══ FAQ ══ -->
+<!-- ══ FAQ ══════════════════════════════════════ -->
 <section class="faq-spread" id="faq" aria-labelledby="faq-title">
   <div class="faq-layout">
     <div class="faq-left">
@@ -1081,7 +1080,7 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
   </div>
 </section>
 
-<!-- ══ RÉSERVATION ══ -->
+<!-- ══ RÉSERVATION ══════════════════════════════ -->
 <section class="cta-spread" id="reservation" aria-labelledby="cta-title">
   <div class="cta-bg-bloom" aria-hidden="true"></div>
   <div class="cta-bg-photo" aria-hidden="true">
@@ -1090,7 +1089,7 @@ footer{background:#0E0A0D;padding:clamp(40px,5vw,68px) clamp(20px,5vw,80px) 26px
   <div class="cta-content">
     <div class="cta-issue r">Réservation</div>
     <h2 class="cta-headline r d1" id="cta-title">Votre<br>plus beau<br><em>jour.</em></h2>
-    <p class="cta-deck r d2">Les créneaux se remplissent vite, surtout pour la saison des mariages. Réservez dès maintenant pour garantir votre date et vivre l'expérience qui vous correspond.</p>
+    <p class="cta-deck r d2">Les créneaux se remplissent vite, surtout pour la saison des mariages. Réservez dès maintenant pour garantir votre date.</p>
     <div class="cta-actions r d3">
       <a href="mailto:contact@elisemarceau.fr?subject=Demande%20de%20réservation" class="cta-btn-main"><span>Réserver par email</span></a>
       <a href="tel:+33612345678" class="cta-btn-phone" aria-label="Appeler le 06 12 34 56 78">
@@ -1245,102 +1244,157 @@ document.querySelectorAll('.faq-q').forEach(btn=>{
   });
 });
 
-/* ── CAROUSEL 3D ── */
+/* ── 3D CAROUSEL ── */
 (function(){
-  const track=document.getElementById('carouselTrack');
-  if(!track)return;
+  const scene   = document.getElementById('c3dScene');
+  const stage   = document.getElementById('c3dStage');
+  const dotsWrap= document.getElementById('c3dDots');
+  const caption = document.getElementById('c3dCaption');
+  const btnPrev = document.getElementById('c3dPrev');
+  const btnNext = document.getElementById('c3dNext');
+  if(!scene)return;
 
-  const CARDS=6;
-  const STEP=360/CARDS;
-  let currentAngle=0;
-  let autoTimer=null;
-  let isPaused=false;
+  const cards  = Array.from(stage.querySelectorAll('.c3d-card'));
+  const labels = cards.map(c=>c.querySelector('.c3d-card-lbl')?.textContent||'');
+  const N      = cards.length;
+  let   current= 0;
+  let   autoTimer=null;
 
-  /* Animation CSS gère la rotation automatique. On pilote via un offset appliqué en plus */
-  let manualOffset=0; /* degrés supplémentaires appliqués instantanément */
-
-  function rotateTo(angle){
-    manualOffset=angle;
-    /* On injecte une animation custom one-shot pour aller à cet angle */
-    track.style.animationPlayState='paused';
-    track.style.transform=`rotateY(${-manualOffset}deg)`;
-    updateDots(Math.round(manualOffset/STEP)%CARDS);
+  /* ── Compute responsive radius from actual rendered card width ── */
+  function getRadius(){
+    const cw = cards[0].getBoundingClientRect().width || 180;
+    const r  = cw / (2 * Math.sin(Math.PI / N));
+    return Math.max(r, cw * 0.85);
   }
 
-  /* Contrôles boutons */
-  document.getElementById('carouselPrev').addEventListener('click',()=>{
-    manualOffset-=STEP;
-    stopAuto();
-    rotateTo(manualOffset);
-    startAutoAfterDelay();
-  });
-  document.getElementById('carouselNext').addEventListener('click',()=>{
-    manualOffset+=STEP;
-    stopAuto();
-    rotateTo(manualOffset);
-    startAutoAfterDelay();
-  });
-
-  /* Dots */
-  document.querySelectorAll('.carousel-dot').forEach(dot=>{
-    dot.addEventListener('click',()=>{
-      const i=+dot.dataset.i;
-      manualOffset=i*STEP;
-      stopAuto();
-      rotateTo(manualOffset);
-      startAutoAfterDelay();
-    });
-  });
-
-  function updateDots(active){
-    const idx=((active%CARDS)+CARDS)%CARDS;
-    document.querySelectorAll('.carousel-dot').forEach((d,i)=>{
-      d.classList.toggle('act',i===idx);
-      d.setAttribute('aria-selected',String(i===idx));
+  /* ── Place all cards around the ring ── */
+  function layout(){
+    const r   = getRadius();
+    const deg = 360 / N;
+    cards.forEach((card,i)=>{
+      card.style.transform =
+        `translateX(-50%) translateY(-50%) rotateY(${deg*i}deg) translateZ(${r}px)`;
     });
   }
 
-  /* Auto-rotate via CSS animation (smooth, GPU) */
-  /* When user interacts we switch to manual JS mode then re-enable CSS after delay */
-  function stopAuto(){
-    track.style.animation='none';
-    isPaused=true;
-    clearTimeout(autoTimer);
-  }
-  function startAutoAfterDelay(){
-    clearTimeout(autoTimer);
-    autoTimer=setTimeout(()=>{
-      /* Resume CSS animation from current position */
-      const current=-manualOffset;
-      track.style.animation='none';
-      /* Force reflow */
-      track.getBoundingClientRect();
-      track.style.transform=`rotateY(${current}deg)`;
-      track.style.animation=`carouselSpin 22s linear infinite`;
-      isPaused=false;
-    },3000);
+  /* ── Snap stage so `idx` faces camera ── */
+  function go(idx){
+    idx = ((idx % N) + N) % N;
+    current = idx;
+    stage.style.transform = `rotateY(${-360/N*idx}deg)`;
+    cards.forEach((c,i)=>c.classList.toggle('active',i===idx));
+    dotsWrap.querySelectorAll('.c3d-dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
+    caption.textContent = labels[idx];
   }
 
-  /* Hover pause via CSS (handled by :hover in animation-play-state) is enough */
-  /* But we also track for dot sync */
-  let dotSyncRAF=null;
-  function syncDotsLoop(){
-    /* get current computed rotation from matrix for dot sync */
-    dotSyncRAF=requestAnimationFrame(syncDotsLoop);
+  /* ── Build dots ── */
+  for(let i=0;i<N;i++){
+    const d=document.createElement('button');
+    d.className='c3d-dot'+(i===0?' active':'');
+    d.setAttribute('aria-label',`Photo ${i+1} : ${labels[i]}`);
+    d.setAttribute('role','tab');
+    d.addEventListener('click',()=>{clearAuto();go(i);startAuto();});
+    dotsWrap.appendChild(d);
   }
 
-  /* Touch swipe on carousel */
-  let touchStartX=0;
-  track.addEventListener('touchstart',e=>{touchStartX=e.touches[0].clientX;},{passive:true});
-  track.addEventListener('touchend',e=>{
-    const dx=e.changedTouches[0].clientX-touchStartX;
-    if(Math.abs(dx)>30){
-      manualOffset+=dx>0?-STEP:STEP;
-      stopAuto();
-      rotateTo(manualOffset);
-      startAutoAfterDelay();
+  layout();
+  go(0);
+
+  /* ── Resize observer ── */
+  new ResizeObserver(()=>{ layout(); go(current); }).observe(scene);
+
+  /* ── Arrow buttons ── */
+  btnPrev.addEventListener('click',()=>{clearAuto();go(current-1);startAuto();});
+  btnNext.addEventListener('click',()=>{clearAuto();go(current+1);startAuto();});
+
+  /* ── Keyboard ── */
+  scene.setAttribute('tabindex','0');
+  scene.addEventListener('keydown',e=>{
+    if(e.key==='ArrowLeft'){clearAuto();go(current-1);startAuto();}
+    if(e.key==='ArrowRight'){clearAuto();go(current+1);startAuto();}
+  });
+
+  /* ════════════════════════════════════════
+     LIVE DRAG — mouse + touch
+     Shows intermediate rotation while dragging,
+     snaps to nearest card on release.
+  ════════════════════════════════════════ */
+  let isDragging=false, dragStartX=0, dragDeltaX=0;
+
+  function dragStart(x){
+    isDragging=true; dragStartX=x; dragDeltaX=0;
+    stage.style.transition='none';
+    clearAuto();
+  }
+  function dragMove(x){
+    if(!isDragging)return;
+    dragDeltaX=x-dragStartX;
+    const base=-360/N*current;
+    /* 0.28 deg/px — feels natural */
+    stage.style.transform=`rotateY(${base+dragDeltaX*0.28}deg)`;
+  }
+  function dragEnd(){
+    if(!isDragging)return;
+    isDragging=false;
+    stage.style.transition='transform .7s cubic-bezier(.25,.46,.45,.94)';
+    const steps = Math.round(-dragDeltaX / 60);  /* ~60px per step */
+    go(current + steps);
+    startAuto();
+  }
+
+  /* Mouse */
+  scene.addEventListener('mousedown',e=>{dragStart(e.clientX);e.preventDefault();},{passive:false});
+  window.addEventListener('mousemove',e=>{dragMove(e.clientX);});
+  window.addEventListener('mouseup',dragEnd);
+
+  /* Touch — passive:false only on touchmove so we can prevent page scroll */
+  let touchStartY=0;
+  scene.addEventListener('touchstart',e=>{
+    dragStart(e.touches[0].clientX);
+    touchStartY=e.touches[0].clientY;
+  },{passive:true});
+  scene.addEventListener('touchmove',e=>{
+    const dx=Math.abs(e.touches[0].clientX-dragStartX);
+    const dy=Math.abs(e.touches[0].clientY-touchStartY);
+    /* Only hijack clearly horizontal swipes */
+    if(dx>dy && dx>6) e.preventDefault();
+    dragMove(e.touches[0].clientX);
+  },{passive:false});
+  scene.addEventListener('touchend',dragEnd);
+
+  /* ════════════════════════════════════════
+     WHEEL / TRACKPAD HORIZONTAL SCROLL
+     deltaX > 0 → scroll right → next card
+     Works with trackpad 2-finger swipe and
+     horizontal scroll wheel.
+  ════════════════════════════════════════ */
+  let wheelAccum=0, wheelTimer=null;
+  scene.addEventListener('wheel',e=>{
+    /* Only react to primarily-horizontal movement */
+    if(Math.abs(e.deltaX) < Math.abs(e.deltaY)*0.4) return;
+    e.preventDefault();
+    wheelAccum += e.deltaX;
+    /* Fire a step every ~80px of accumulated scroll */
+    if(Math.abs(wheelAccum)>=80){
+      const dir = wheelAccum>0 ? 1 : -1;
+      wheelAccum = 0;
+      clearAuto();
+      go(current+dir);
+      /* Restart auto after 3s of inactivity */
+      clearTimeout(wheelTimer);
+      wheelTimer=setTimeout(startAuto,3000);
     }
-  });
+  },{passive:false});
+
+  /* ── Card click (only if not a drag) ── */
+  cards.forEach((c,i)=>c.addEventListener('click',()=>{
+    if(Math.abs(dragDeltaX)<8){clearAuto();go(i);startAuto();}
+  }));
+
+  /* ── Auto-rotate ── */
+  function startAuto(){ clearInterval(autoTimer); autoTimer=setInterval(()=>go(current+1),4000); }
+  function clearAuto(){ clearInterval(autoTimer); }
+  startAuto();
 })();
 
 /* ── AVANT/APRÈS SLIDERS ── */
